@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre o Grupo RBM | Ecossistema Empresarial Integrado</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rbm: {
+              navy: '#061F40', blue: '#0754A6', 'blue-bright': '#0878D1', green: '#39A844',
+              lime: '#9BC51C', cyan: '#08AFC4', purple: '#50319A', orange: '#F36C0A',
+              light: '#F5F7FA', border: '#DDE4EC', dark: '#172033'
+            }
+          },
+          fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-rbm-dark antialiased">
+  <header class="sticky-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3.5">
+      <a href="index.html"><img src="public/images/logo-rbm.svg" alt="Grupo RBM" class="h-10 md:h-12 w-auto"></a>
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-heading font-medium">
+        <a href="index.html" class="hover:text-[#0754A6]">Início</a>
+        <a href="sobre.html" class="text-[#0754A6] font-bold border-b-2 border-[#0754A6]">Sobre</a>
+        <a href="solucoes.html" class="hover:text-[#0754A6]">Soluções</a>
+        <a href="empresas.html" class="hover:text-[#0754A6]">Empresas</a>
+        <a href="cases.html" class="hover:text-[#0754A6]">Cases</a>
+        <a href="contato.html" class="hover:text-[#0754A6]">Contato</a>
+      </nav>
+      <a href="https://wa.me/5511999999999" target="_blank" class="hidden sm:inline-flex btn-whatsapp-blue text-xs">
+        <i data-lucide="message-circle" class="w-4 h-4"></i><span>Fale Conosco</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <!-- Banner -->
+      <div class="bg-[#061F40] text-white rounded-3xl p-8 sm:p-12 space-y-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-rbm-lime">Ecossistema Empresarial</span>
+        <h1 class="text-3xl sm:text-4xl font-black font-heading">Sobre o Grupo RBM</h1>
+        <p class="text-sm text-gray-200 leading-relaxed max-w-3xl">
+          O Grupo RBM conecta cinco empresas especializadas que trabalham de forma integrada para oferecer soluções completas e personalizadas para empresas, negócios e varejo. Nosso propósito é unir conhecimento, criatividade, tecnologia e experiência em gestão para impulsionar resultados reais.
+        </p>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-[#F5F7FA] p-6 rounded-2xl border border-rbm-border text-center">
+          <div class="text-3xl font-black font-heading text-[#0754A6] mb-1">+200</div>
+          <div class="text-xs font-semibold text-gray-600 uppercase font-heading">Clientes Ativos</div>
+        </div>
+        <div class="bg-[#F5F7FA] p-6 rounded-2xl border border-rbm-border text-center">
+          <div class="text-3xl font-black font-heading text-[#0754A6] mb-1">+600</div>
+          <div class="text-xs font-semibold text-gray-600 uppercase font-heading">Projetos atendidos</div>
+        </div>
+        <div class="bg-[#F5F7FA] p-6 rounded-2xl border border-rbm-border text-center">
+          <div class="text-3xl font-black font-heading text-[#0754A6] mb-1">15+ anos</div>
+          <div class="text-xs font-semibold text-gray-600 uppercase font-heading">De experiência</div>
+        </div>
+        <div class="bg-[#F5F7FA] p-6 rounded-2xl border border-rbm-border text-center">
+          <div class="text-3xl font-black font-heading text-[#0754A6] mb-1">Atendimento</div>
+          <div class="text-xs font-semibold text-gray-600 uppercase font-heading">Nacional</div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <h2 class="text-2xl font-black font-heading text-rbm-navy">História e Propósito</h2>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            Nascemos com a missão de eliminar barreiras entre finanças, marketing, software e sinalização digital. Reunimos equipes multidisciplinares altamente especializadas para entregar soluções integradas que simplificam a operação das empresas.
+          </p>
+        </div>
+        <div class="lg:col-span-6 bg-[#F5F7FA] p-8 rounded-3xl border border-rbm-border space-y-4">
+          <div>
+            <h3 class="text-base font-bold font-heading text-[#0754A6] mb-1">Missão</h3>
+            <p class="text-xs text-gray-600">Conectar soluções inteligentes e tecnologia de ponta para potencializar o crescimento sustentável de empresas de diversos segmentos.</p>
+          </div>
+          <div>
+            <h3 class="text-base font-bold font-heading text-[#0754A6] mb-1">Visão</h3>
+            <p class="text-xs text-gray-600">Ser reconhecido nacionalmente como um ecossistema empresarial referência em inovação, tecnologia e gestão integrada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-[#061F40] text-white py-8 border-t border-blue-900/50">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-400">
+      <p>© <span id="current-year">2026</span> Grupo RBM. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

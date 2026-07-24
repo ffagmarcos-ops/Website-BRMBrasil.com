@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  color: #172033;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F7FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #0754A6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #061F40;
+}

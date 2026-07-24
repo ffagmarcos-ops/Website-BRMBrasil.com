@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresas do Grupo | Grupo RBM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rbm: {
+              navy: '#061F40', blue: '#0754A6', 'blue-bright': '#0878D1', green: '#39A844',
+              lime: '#9BC51C', cyan: '#08AFC4', purple: '#50319A', orange: '#F36C0A',
+              light: '#F5F7FA', border: '#DDE4EC', dark: '#172033'
+            }
+          },
+          fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-rbm-dark antialiased">
+  <header class="sticky-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3.5">
+      <a href="index.html"><img src="public/images/logo-rbm.svg" alt="Grupo RBM" class="h-10 md:h-12 w-auto"></a>
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-heading font-medium">
+        <a href="index.html" class="hover:text-[#0754A6]">Início</a>
+        <a href="sobre.html" class="hover:text-[#0754A6]">Sobre</a>
+        <a href="solucoes.html" class="hover:text-[#0754A6]">Soluções</a>
+        <a href="empresas.html" class="text-[#0754A6] font-bold border-b-2 border-[#0754A6]">Empresas</a>
+        <a href="cases.html" class="hover:text-[#0754A6]">Cases</a>
+        <a href="contato.html" class="hover:text-[#0754A6]">Contato</a>
+      </nav>
+      <a href="https://wa.me/5511999999999" target="_blank" class="hidden sm:inline-flex btn-whatsapp-blue text-xs">
+        <i data-lucide="message-circle" class="w-4 h-4"></i><span>Fale Conosco</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <h1 class="text-3xl font-black font-heading text-rbm-navy">Empresas do Grupo RBM</h1>
+        <p class="text-xs sm:text-sm text-gray-600">Cinco empresas especializadas unidas para entregar resultados integrados ao seu negócio.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 1. Contabilidade -->
+        <div id="contabilidade" class="bg-white p-6 rounded-3xl border border-rbm-border shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-[#39A844] flex items-center justify-center">
+            <i data-lucide="calculator" class="w-6 h-6"></i>
+          </div>
+          <h2 class="text-lg font-extrabold font-heading text-[#39A844]">CONTABILIDADE</h2>
+          <p class="text-xs text-gray-600">Gestão financeira, fiscal e contábil completa para empresas de todos os portes com foco em planejamento tributário inteligente.</p>
+          <a href="contato.html" class="inline-flex items-center text-xs font-bold text-[#39A844]">Falar com especialista <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i></a>
+        </div>
+
+        <!-- 2. M.O Publicidade -->
+        <div id="mo-publicidade" class="bg-white p-6 rounded-3xl border border-rbm-border shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-orange-50 text-[#F36C0A] flex items-center justify-center">
+            <i data-lucide="megaphone" class="w-6 h-6"></i>
+          </div>
+          <h2 class="text-lg font-extrabold font-heading text-[#F36C0A]">M.O PUBLICIDADE</h2>
+          <p class="text-xs text-gray-600">Marketing digital, redes sociais, campanhas publicitárias, tráfego pago e produção visual para posicionamento de marca.</p>
+          <a href="contato.html" class="inline-flex items-center text-xs font-bold text-[#F36C0A]">Falar com especialista <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i></a>
+        </div>
+
+        <!-- 3. Desenvolvimento -->
+        <div id="desenvolvimento" class="bg-white p-6 rounded-3xl border border-rbm-border shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-purple-50 text-[#50319A] flex items-center justify-center">
+            <i data-lucide="code-2" class="w-6 h-6"></i>
+          </div>
+          <h2 class="text-lg font-extrabold font-heading text-[#50319A]">DESENVOLVIMENTO</h2>
+          <p class="text-xs text-gray-600">Desenvolvimento de sistemas web, aplicativos móveis, automações de processos e projetos de Inteligência Artificial sob medida.</p>
+          <a href="contato.html" class="inline-flex items-center text-xs font-bold text-[#50319A]">Falar com especialista <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i></a>
+        </div>
+
+        <!-- 4. DIGMIDIA -->
+        <div id="digmidia" class="bg-white p-6 rounded-3xl border border-rbm-border shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#0878D1] flex items-center justify-center">
+            <i data-lucide="tv" class="w-6 h-6"></i>
+          </div>
+          <h2 class="text-lg font-extrabold font-heading text-[#0878D1]">DIGMIDIA</h2>
+          <p class="text-xs text-gray-600">Tecnologia em telas, TV indoor corporativa, encartes digitais dinâmicos e sistemas de treinamento EAD.</p>
+          <a href="contato.html" class="inline-flex items-center text-xs font-bold text-[#0878D1]">Falar com especialista <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i></a>
+        </div>
+
+        <!-- 5. Sistemas -->
+        <div id="sistemas" class="bg-white p-6 rounded-3xl border border-rbm-border shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-full bg-cyan-50 text-[#08AFC4] flex items-center justify-center">
+            <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+          </div>
+          <h2 class="text-lg font-extrabold font-heading text-[#08AFC4]">SISTEMAS</h2>
+          <p class="text-xs text-gray-600">Softwares de gestão para varejo alimentar, PDV de alta disponibilidade, frente de caixa, estoque e suporte especializado 24/7.</p>
+          <a href="contato.html" class="inline-flex items-center text-xs font-bold text-[#08AFC4]">Falar com especialista <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-[#061F40] text-white py-8 border-t border-blue-900/50">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-400">
+      <p>© <span id="current-year">2026</span> Grupo RBM. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

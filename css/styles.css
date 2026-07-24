@@ -1,0 +1,188 @@
+/* ==========================================================================
+   GRUPO RBM - DESIGN SYSTEM & CUSTOM STYLES (HTML, CSS, JS)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap');
+
+:root {
+  --color-navy: #061F40;
+  --color-blue: #0754A6;
+  --color-blue-bright: #0878D1;
+  --color-green: #39A844;
+  --color-lime: #9BC51C;
+  --color-cyan: #08AFC4;
+  --color-purple: #50319A;
+  --color-orange: #F36C0A;
+  --color-light: #F5F7FA;
+  --color-border: #DDE4EC;
+  --color-dark: #172033;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: #FFFFFF;
+}
+
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header & Sticky Nav */
+header.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+header.sticky-header.scrolled {
+  box-shadow: 0 4px 20px rgba(6, 31, 64, 0.08);
+}
+
+/* Dropdown Menu */
+.nav-item-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 280px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(6, 31, 64, 0.12);
+  padding: 8px;
+  z-index: 1100;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+  display: block;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Buttons */
+.btn-whatsapp-blue {
+  background-color: var(--color-blue);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1;
+  transition: all 0.25s ease;
+}
+
+.btn-whatsapp-blue:hover {
+  background-color: #064385;
+  box-shadow: 0 4px 12px rgba(7, 84, 166, 0.3);
+}
+
+.btn-whatsapp-green {
+  background-color: var(--color-green);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  line-height: 1;
+  transition: all 0.25s ease;
+}
+
+.btn-whatsapp-green:hover {
+  background-color: #2e8837;
+  box-shadow: 0 4px 16px rgba(57, 168, 68, 0.35);
+}
+
+.btn-outline-white {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+svg, i[data-lucide] {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Cards & Hover Effects */
+.card-company {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-company:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(6, 31, 64, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F7FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #0754A6;
+  border-radius: 4px;
+}

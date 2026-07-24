@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Grupo RBM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rbm: {
+              navy: '#061F40', blue: '#0754A6', 'blue-bright': '#0878D1', green: '#39A844',
+              lime: '#9BC51C', cyan: '#08AFC4', purple: '#50319A', orange: '#F36C0A',
+              light: '#F5F7FA', border: '#DDE4EC', dark: '#172033'
+            }
+          },
+          fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-rbm-dark antialiased">
+  <header class="sticky-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3.5">
+      <a href="index.html"><img src="public/images/logo-rbm.svg" alt="Grupo RBM" class="h-10 md:h-12 w-auto"></a>
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-heading font-medium">
+        <a href="index.html" class="hover:text-[#0754A6]">Início</a>
+        <a href="sobre.html" class="hover:text-[#0754A6]">Sobre</a>
+        <a href="solucoes.html" class="hover:text-[#0754A6]">Soluções</a>
+        <a href="empresas.html" class="hover:text-[#0754A6]">Empresas</a>
+        <a href="cases.html" class="hover:text-[#0754A6]">Cases</a>
+        <a href="contato.html" class="text-[#0754A6] font-bold border-b-2 border-[#0754A6]">Contato</a>
+      </nav>
+      <a href="https://wa.me/5511999999999" target="_blank" class="hidden sm:inline-flex btn-whatsapp-blue text-xs">
+        <i data-lucide="message-circle" class="w-4 h-4"></i><span>Fale Conosco</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <h1 class="text-3xl font-black font-heading text-rbm-navy">Fale com os Especialistas do Grupo RBM</h1>
+        <p class="text-xs sm:text-sm text-gray-600">Estamos à disposição para entender sua empresa e oferecer soluções integradas sob medida.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-5 bg-[#061F40] text-white p-8 rounded-3xl space-y-6">
+          <h2 class="text-xl font-bold font-heading">Atendimento Direto</h2>
+          
+          <div class="space-y-4 text-xs text-gray-200">
+            <div class="flex items-center space-x-3">
+              <i data-lucide="phone" class="w-5 h-5 text-cyan-400"></i>
+              <div>
+                <span class="font-bold text-white block">Telefone & WhatsApp</span>
+                <span>(11) 99999-9999</span>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-3">
+              <i data-lucide="mail" class="w-5 h-5 text-cyan-400"></i>
+              <div>
+                <span class="font-bold text-white block">E-mail Corporativo</span>
+                <span>contato@gruporbm.com.br</span>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-cyan-400"></i>
+              <div>
+                <span class="font-bold text-white block">Endereço Principal</span>
+                <span>Av. Paulista, 1000 - São Paulo, SP</span>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-3">
+              <i data-lucide="clock" class="w-5 h-5 text-cyan-400"></i>
+              <div>
+                <span class="font-bold text-white block">Horário de Atendimento</span>
+                <span>Segunda a Sexta, 08h às 18h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/15">
+            <a href="https://wa.me/5511999999999" target="_blank" class="w-full btn-whatsapp-green justify-center text-xs">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Abrir WhatsApp Direct</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-[#F5F7FA] p-8 rounded-3xl border border-rbm-border">
+          <h2 class="text-xl font-extrabold font-heading text-rbm-navy mb-6">Envie uma mensagem</h2>
+          <form class="contact-form-js space-y-4 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-semibold mb-1">Nome completo*</label>
+                <input type="text" required placeholder="Seu nome" class="w-full p-3 rounded-xl border border-rbm-border focus:outline-none">
+              </div>
+              <div>
+                <label class="block font-semibold mb-1">E-mail corporativo*</label>
+                <input type="email" required placeholder="seu.email@empresa.com.br" class="w-full p-3 rounded-xl border border-rbm-border focus:outline-none">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-semibold mb-1">Telefone / WhatsApp*</label>
+                <input type="tel" required placeholder="(11) 99999-9999" class="w-full p-3 rounded-xl border border-rbm-border focus:outline-none">
+              </div>
+              <div>
+                <label class="block font-semibold mb-1">Empresa</label>
+                <input type="text" placeholder="Nome da empresa" class="w-full p-3 rounded-xl border border-rbm-border focus:outline-none">
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-semibold mb-1">Área de Interesse*</label>
+              <select class="w-full p-3 rounded-xl border border-rbm-border focus:outline-none">
+                <option value="solucoes-integradas">Soluções integradas Grupo RBM</option>
+                <option value="contabilidade">Contabilidade</option>
+                <option value="mo-publicidade">M.O Publicidade</option>
+                <option value="desenvolvimento">Desenvolvimento de software</option>
+                <option value="digmidia">DIGMIDIA (TV indoor, encartes digitais)</option>
+                <option value="sistemas">Sistemas</option>
+                <option value="outros">Outros</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-semibold mb-1">Mensagem*</label>
+              <textarea rows="4" required placeholder="Como podemos ajudar o seu negócio?" class="w-full p-3 rounded-xl border border-rbm-border focus:outline-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-[#0754A6] hover:bg-[#064385] text-white font-bold font-heading text-xs rounded-xl transition-colors">
+              <span>Enviar mensagem</span>
+            </button>
+            <div class="form-success-msg hidden text-xs font-bold text-emerald-600 text-center pt-2">
+              ✓ Mensagem enviada com sucesso! Em breve entraremos em contato.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-[#061F40] text-white py-8 border-t border-blue-900/50">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-400">
+      <p>© <span id="current-year">2026</span> Grupo RBM. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

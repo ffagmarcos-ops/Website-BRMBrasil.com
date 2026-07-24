@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <defs>
+    <linearGradient id="arcBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0754A6" />
+      <stop offset="100%" stop-color="#0878D1" />
+    </linearGradient>
+    <linearGradient id="arcGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39A844" />
+      <stop offset="100%" stop-color="#9BC51C" />
+    </linearGradient>
+    <linearGradient id="arcLime" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9BC51C" />
+      <stop offset="100%" stop-color="#08AFC4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Icon Container -->
+  <g transform="translate(5, 5)">
+    <!-- Arc 1 Top-Right Blue -->
+    <path d="M 30,5 A 25,25 0 0 1 55,30" fill="none" stroke="url(#arcBlue)" stroke-width="5.5" stroke-linecap="round" />
+    <!-- Arc 2 Bottom-Right Green -->
+    <path d="M 55,30 A 25,25 0 0 1 30,55" fill="none" stroke="url(#arcGreen)" stroke-width="5.5" stroke-linecap="round" />
+    <!-- Arc 3 Bottom-Left Lime -->
+    <path d="M 30,55 A 25,25 0 0 1 5,30" fill="none" stroke="url(#arcLime)" stroke-width="5.5" stroke-linecap="round" />
+    <!-- Arc 4 Top-Left Cyan -->
+    <path d="M 5,30 A 25,25 0 0 1 30,5" fill="none" stroke="url(#arcBlue)" stroke-width="5.5" stroke-dasharray="16 10" stroke-linecap="round" />
+
+    <!-- Inner Circle White -->
+    <circle cx="30" cy="30" r="18" fill="#FFFFFF" />
+    
+    <!-- Monitor Icon inside circle -->
+    <g transform="translate(19, 19)">
+      <rect x="2" y="2" width="18" height="13" rx="2" fill="#061F40" />
+      <rect x="3.5" y="3.5" width="15" height="10" rx="1.5" fill="#FFFFFF" />
+      <path d="M 5.5,10 L 9.5,6 L 12.5,8.5 L 15.5,5.5" fill="none" stroke="#0754A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M 9,15 L 13,15 M 11,15 L 11,18 M 7,18 L 15,18" stroke="#061F40" stroke-width="1.8" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Typography RBM -->
+  <text x="75" y="46" font-family="Montserrat, Arial, sans-serif" font-weight="900" font-size="38" fill="#061F40" letter-spacing="-0.5">RBM</text>
+</svg>

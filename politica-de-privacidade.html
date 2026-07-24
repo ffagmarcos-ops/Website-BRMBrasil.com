@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade | Grupo RBM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rbm: {
+              navy: '#061F40', blue: '#0754A6', 'blue-bright': '#0878D1', green: '#39A844',
+              lime: '#9BC51C', cyan: '#08AFC4', purple: '#50319A', orange: '#F36C0A',
+              light: '#F5F7FA', border: '#DDE4EC', dark: '#172033'
+            }
+          },
+          fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-rbm-dark antialiased">
+  <header class="sticky-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3.5">
+      <a href="index.html"><img src="public/images/logo-rbm.svg" alt="Grupo RBM" class="h-10 md:h-12 w-auto"></a>
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-heading font-medium">
+        <a href="index.html" class="hover:text-[#0754A6]">Início</a>
+        <a href="sobre.html" class="hover:text-[#0754A6]">Sobre</a>
+        <a href="solucoes.html" class="hover:text-[#0754A6]">Soluções</a>
+        <a href="empresas.html" class="hover:text-[#0754A6]">Empresas</a>
+        <a href="cases.html" class="hover:text-[#0754A6]">Cases</a>
+        <a href="contato.html" class="hover:text-[#0754A6]">Contato</a>
+      </nav>
+      <a href="https://wa.me/5511999999999" target="_blank" class="hidden sm:inline-flex btn-whatsapp-blue text-xs">
+        <i data-lucide="message-circle" class="w-4 h-4"></i><span>Fale Conosco</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed">
+      <h1 class="text-3xl font-black font-heading text-rbm-navy">Política de Privacidade</h1>
+      <p class="text-xs text-gray-500">Última atualização: Julho de 2026</p>
+
+      <div class="p-4 bg-amber-50 border border-amber-300 rounded-2xl text-xs text-amber-800 space-y-1">
+        <strong class="block font-bold">AVISO LEGAL DE REVISÃO JURÍDICA:</strong>
+        <p>Esta minuta inicial foi elaborada para conformidade com a LGPD e deve ser revisada pelo encarregado de dados (DPO) ou assessoria jurídica da empresa antes da veiculação oficial.</p>
+      </div>
+
+      <h2 class="text-base font-bold font-heading text-rbm-navy pt-2">1. Coleta e Uso de Dados</h2>
+      <p>O Grupo RBM coleta dados pessoais (nome, e-mail, telefone e empresa) exclusivamente para atender a solicitações de diagnóstico, orçamentos e prestar atendimento às empresas interessadas.</p>
+
+      <h2 class="text-base font-bold font-heading text-rbm-navy pt-2">2. Direitos do Titular (LGPD)</h2>
+      <p>Em conformidade com a Lei nº 13.709/2018, você pode requerer o acesso, atualização ou eliminação de seus dados pessoais a qualquer momento através do e-mail <strong>privacidade@gruporbm.com.br</strong>.</p>
+    </div>
+  </main>
+
+  <footer class="bg-[#061F40] text-white py-8 border-t border-blue-900/50">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-400">
+      <p>© <span id="current-year">2026</span> Grupo RBM. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

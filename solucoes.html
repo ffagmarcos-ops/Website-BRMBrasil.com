@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soluções Integradas | Grupo RBM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rbm: {
+              navy: '#061F40', blue: '#0754A6', 'blue-bright': '#0878D1', green: '#39A844',
+              lime: '#9BC51C', cyan: '#08AFC4', purple: '#50319A', orange: '#F36C0A',
+              light: '#F5F7FA', border: '#DDE4EC', dark: '#172033'
+            }
+          },
+          fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-rbm-dark antialiased">
+  <header class="sticky-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3.5">
+      <a href="index.html"><img src="public/images/logo-rbm.svg" alt="Grupo RBM" class="h-10 md:h-12 w-auto"></a>
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-heading font-medium">
+        <a href="index.html" class="hover:text-[#0754A6]">Início</a>
+        <a href="sobre.html" class="hover:text-[#0754A6]">Sobre</a>
+        <a href="solucoes.html" class="text-[#0754A6] font-bold border-b-2 border-[#0754A6]">Soluções</a>
+        <a href="empresas.html" class="hover:text-[#0754A6]">Empresas</a>
+        <a href="cases.html" class="hover:text-[#0754A6]">Cases</a>
+        <a href="contato.html" class="hover:text-[#0754A6]">Contato</a>
+      </nav>
+      <a href="https://wa.me/5511999999999" target="_blank" class="hidden sm:inline-flex btn-whatsapp-blue text-xs">
+        <i data-lucide="message-circle" class="w-4 h-4"></i><span>Fale Conosco</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <h1 class="text-3xl font-black font-heading text-rbm-navy">Soluções Integradas</h1>
+        <p class="text-xs sm:text-sm text-gray-600">Tecnologia, comunicação, contabilidade e gestão trabalhando juntas pelo crescimento sustentável da sua empresa.</p>
+      </div>
+
+      <div class="space-y-6">
+        <!-- 1. Gestao -->
+        <div id="gestao" class="bg-[#F5F7FA] p-6 rounded-3xl border border-rbm-border space-y-2">
+          <span class="text-xs font-bold text-[#39A844] uppercase font-heading">Contabilidade & Gestão</span>
+          <h2 class="text-xl font-bold font-heading text-rbm-navy">Gestão Empresarial e Fiscal</h2>
+          <p class="text-xs text-gray-600">Planejamento tributário, departamento pessoal, regularização fiscal e relatórios estratégicos para controle total da operação.</p>
+        </div>
+
+        <!-- 2. Marketing -->
+        <div id="marketing" class="bg-[#F5F7FA] p-6 rounded-3xl border border-rbm-border space-y-2">
+          <span class="text-xs font-bold text-[#F36C0A] uppercase font-heading">Publicidade & Growth</span>
+          <h2 class="text-xl font-bold font-heading text-rbm-navy">Marketing e Comunicação Estratégica</h2>
+          <p class="text-xs text-gray-600">Gestão de redes sociais, campanhas publicitárias, tráfego pago, identidade visual, vídeos e materiais impressos e digitais.</p>
+        </div>
+
+        <!-- 3. Desenvolvimento -->
+        <div id="desenvolvimento" class="bg-[#F5F7FA] p-6 rounded-3xl border border-rbm-border space-y-2">
+          <span class="text-xs font-bold text-[#50319A] uppercase font-heading">Tecnologia & Softwares</span>
+          <h2 class="text-xl font-bold font-heading text-rbm-navy">Desenvolvimento de Software Sob Medida</h2>
+          <p class="text-xs text-gray-600">Sistemas web, aplicativos iOS e Android, painéis administrativos, automação de rotinas e inteligência artificial.</p>
+        </div>
+
+        <!-- 4. DIGMIDIA -->
+        <div id="digmidia" class="bg-[#F5F7FA] p-6 rounded-3xl border border-rbm-border space-y-2">
+          <span class="text-xs font-bold text-[#0878D1] uppercase font-heading">Presença Digital em Telas</span>
+          <h2 class="text-xl font-bold font-heading text-rbm-navy">DIGMIDIA - TV Indoor e Encartes Digitais</h2>
+          <p class="text-xs text-gray-600">TV indoor comercial, encartes digitais dinâmicos, painéis de sinalização e sistemas EAD de treinamento corporativo.</p>
+        </div>
+
+        <!-- 5. Supermercados -->
+        <div id="supermercados" class="bg-[#F5F7FA] p-6 rounded-3xl border border-rbm-border space-y-2">
+          <span class="text-xs font-bold text-[#08AFC4] uppercase font-heading">Sistemas Especializados</span>
+          <h2 class="text-xl font-bold font-heading text-rbm-navy">Sistemas para Supermercados e Varejo Alimentar</h2>
+          <p class="text-xs text-gray-600">Frente de caixa (PDV), controle de estoque, emissão fiscal, integração com balanças e suporte técnico especializado 7 dias por semana.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-[#061F40] text-white py-8 border-t border-blue-900/50">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-400">
+      <p>© <span id="current-year">2026</span> Grupo RBM. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
