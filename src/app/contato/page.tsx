@@ -9,8 +9,8 @@ import { FAQ } from "@/components/ui/FAQ";
 import { generalFaqs } from "@/data/faq";
 
 export const metadata: Metadata = {
-  title: "Contato | Grupo RBM",
-  description: "Fale com os especialistas do Grupo RBM. Atendimento integrado em contabilidade, marketing, desenvolvimento de software e sistemas.",
+  title: "Contato | Grupo BRM",
+  description: "Fale com os especialistas do Grupo BRM. Atendimento integrado em contabilidade, marketing, desenvolvimento de software e sistemas.",
 };
 
 export default function ContatoPage() {
@@ -21,8 +21,8 @@ export default function ContatoPage() {
 
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <h1 className="text-3xl sm:text-4xl font-black font-heading text-rbm-navy">
-            Fale com o Grupo RBM
+          <h1 className="text-3xl sm:text-4xl font-black font-heading text-brm-navy">
+            Fale com o Grupo BRM
           </h1>
           <p className="text-sm text-gray-600 leading-relaxed">
             Estamos prontos para entender as necessidades do seu negócio e apresentar as melhores soluções integradas.
@@ -76,8 +76,8 @@ export default function ContatoPage() {
           </div>
 
           {/* Right Column: Full Form */}
-          <div className="lg:col-span-7 bg-[#F5F7FA] p-8 rounded-3xl border border-rbm-border shadow-sm">
-            <h2 className="text-xl font-extrabold font-heading text-rbm-navy mb-6">
+          <div className="lg:col-span-7 bg-[#F5F7FA] p-8 rounded-3xl border border-brm-border shadow-sm">
+            <h2 className="text-xl font-extrabold font-heading text-brm-navy mb-6">
               Envie uma mensagem
             </h2>
             <ContactForm compact={false} />

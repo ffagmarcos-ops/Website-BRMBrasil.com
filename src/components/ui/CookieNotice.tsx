@@ -24,7 +24,7 @@ export const CookieNotice: React.FC = () => {
   return (
     <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md z-50 bg-[#061F40] text-white p-4 rounded-2xl shadow-2xl border border-white/20 flex flex-col space-y-3">
       <div className="flex items-start space-x-3">
-        <Cookie className="w-5 h-5 text-rbm-lime shrink-0 mt-0.5" />
+        <Cookie className="w-5 h-5 text-brm-lime shrink-0 mt-0.5" />
         <p className="text-xs text-gray-200 leading-relaxed">
           Utilizamos cookies para oferecer a melhor experiência em nosso site. Ao continuar navegando, você concorda com a nossa{" "}
           <Link href="/politica-de-privacidade" className="underline text-cyan-300 hover:text-white">

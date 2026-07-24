@@ -7,7 +7,7 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { companies } from "@/data/companies";
 
 export const metadata: Metadata = {
-  title: "Soluções Integradas | Grupo RBM",
+  title: "Soluções Integradas | Grupo BRM",
   description: "Soluções completas em gestão empresarial, marketing, desenvolvimento de software, mídia digital e sistemas para supermercados.",
 };
 
@@ -19,7 +19,7 @@ export default function SolucoesPage() {
 
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <h1 className="text-3xl sm:text-4xl font-black font-heading text-rbm-navy">
+          <h1 className="text-3xl sm:text-4xl font-black font-heading text-brm-navy">
             Soluções Integradas para Negócios
           </h1>
           <p className="text-sm text-gray-600 leading-relaxed">
@@ -33,7 +33,7 @@ export default function SolucoesPage() {
             <div
               key={c.id}
               id={c.slug}
-              className="bg-[#F5F7FA] rounded-3xl p-8 border border-rbm-border shadow-sm scroll-mt-24"
+              className="bg-[#F5F7FA] rounded-3xl p-8 border border-brm-border shadow-sm scroll-mt-24"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 <div className="lg:col-span-5 space-y-4">
@@ -44,7 +44,7 @@ export default function SolucoesPage() {
                     {c.name}
                   </span>
 
-                  <h2 className="text-2xl font-black font-heading text-rbm-navy">{c.title}</h2>
+                  <h2 className="text-2xl font-black font-heading text-brm-navy">{c.title}</h2>
 
                   <p className="text-xs text-gray-700 leading-relaxed">{c.fullDescription}</p>
 
@@ -60,13 +60,13 @@ export default function SolucoesPage() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-7 bg-white p-6 rounded-2xl border border-rbm-border space-y-3">
+                <div className="lg:col-span-7 bg-white p-6 rounded-2xl border border-brm-border space-y-3">
                   <h3 className="text-xs font-bold font-heading uppercase tracking-wider text-gray-500 mb-2">
                     Serviços e Especialidades Incluídas
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {c.services.map((srv, idx) => (
-                      <div key={idx} className="flex items-center space-x-2.5 text-xs text-rbm-dark font-medium">
+                      <div key={idx} className="flex items-center space-x-2.5 text-xs text-brm-dark font-medium">
                         <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: c.color }} />
                         <span>{srv}</span>
                       </div>

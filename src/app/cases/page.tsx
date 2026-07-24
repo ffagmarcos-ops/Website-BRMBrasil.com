@@ -22,11 +22,11 @@ export default function CasesPage() {
 
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-          <h1 className="text-3xl sm:text-4xl font-black font-heading text-rbm-navy">
+          <h1 className="text-3xl sm:text-4xl font-black font-heading text-brm-navy">
             Resultados que Geram Confiança
           </h1>
           <p className="text-sm text-gray-600 leading-relaxed">
-            Conheça como as soluções integradas do Grupo RBM auxiliam empresas a superar desafios em contabilidade, marketing, desenvolvimento e mídia digital.
+            Conheça como as soluções integradas do Grupo BRM auxiliam empresas a superar desafios em contabilidade, marketing, desenvolvimento e mídia digital.
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function CasesPage() {
             {filteredCases.map((item: CaseItem) => (
               <div
                 key={item.id}
-                className="bg-[#F5F7FA] rounded-3xl p-7 border border-rbm-border shadow-sm flex flex-col justify-between space-y-6"
+                className="bg-[#F5F7FA] rounded-3xl p-7 border border-brm-border shadow-sm flex flex-col justify-between space-y-6"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -76,7 +76,7 @@ export default function CasesPage() {
                     </span>
                   </div>
 
-                  <h2 className="text-xl font-extrabold font-heading text-rbm-navy">
+                  <h2 className="text-xl font-extrabold font-heading text-brm-navy">
                     {item.clientName}: {item.title}
                   </h2>
 
@@ -108,9 +108,9 @@ export default function CasesPage() {
           </div>
         ) : (
           /* Empty state */
-          <div className="bg-[#F5F7FA] rounded-3xl p-12 text-center space-y-3 max-w-md mx-auto mb-16 border border-rbm-border">
+          <div className="bg-[#F5F7FA] rounded-3xl p-12 text-center space-y-3 max-w-md mx-auto mb-16 border border-brm-border">
             <AlertCircle className="w-10 h-10 text-gray-400 mx-auto" />
-            <h3 className="text-base font-bold font-heading text-rbm-navy">Nenhum case encontrado</h3>
+            <h3 className="text-base font-bold font-heading text-brm-navy">Nenhum case encontrado</h3>
             <p className="text-xs text-gray-500">
               Não existem cases cadastrados para a empresa selecionada no momento.
             </p>

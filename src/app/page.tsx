@@ -15,7 +15,7 @@ export default function Home() {
       {/* 2. As 5 Empresas do Grupo */}
       <CompanyCards />
 
-      {/* 3. Sobre o Grupo RBM + Indicadores */}
+      {/* 3. Sobre o Grupo BRM + Indicadores */}
       <AboutSection />
 
       {/* 4. Soluções para Empresas */}

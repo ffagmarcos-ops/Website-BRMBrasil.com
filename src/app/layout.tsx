@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    "Grupo RBM",
+    "Grupo BRM",
     "soluções empresariais",
     "contabilidade",
     "marketing digital",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "automação empresarial",
     "tecnologia para empresas",
   ],
-  authors: [{ name: "Grupo RBM" }],
+  authors: [{ name: "Grupo BRM" }],
   openGraph: {
     title: `${siteConfig.name} | Soluções Integradas para Empresas`,
     description: siteConfig.description,
@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/escritorio-rbm.jpg",
+        url: "/images/escritorio-brm.jpg",
         width: 1200,
         height: 630,
-        alt: "Grupo RBM - Soluções Integradas",
+        alt: "Grupo BRM - Soluções Integradas",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteConfig.name} | Soluções Integradas para Empresas`,
     description: siteConfig.description,
-    images: ["/images/escritorio-rbm.jpg"],
+    images: ["/images/escritorio-brm.jpg"],
   },
   robots: {
     index: true,
@@ -65,7 +65,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/images/logo-rbm.svg`,
+    logo: `${siteConfig.url}/images/logo-brm.svg`,
     description: siteConfig.description,
     telephone: siteConfig.contactPhone,
     email: siteConfig.contactEmail,

@@ -90,8 +90,8 @@ export const Hero: React.FC = () => {
           <div className="hidden lg:block lg:col-span-5 absolute right-0 top-0 bottom-0 w-1/2 h-full z-0">
             <div className="relative w-full h-full">
               <Image
-                src="/images/escritorio-rbm.jpg"
-                alt="Escritório corporativo moderno do Grupo RBM com painel digital"
+                src="/images/escritorio-brm.jpg"
+                alt="Escritório corporativo moderno do Grupo BRM com painel digital"
                 fill
                 priority
                 className="object-cover object-center"

@@ -8,13 +8,13 @@ import { casesData } from "@/data/cases";
 
 export const ProcessSection: React.FC = () => {
   return (
-    <section className="bg-[#F5F7FA] py-14 border-b border-rbm-border/80">
+    <section className="bg-[#F5F7FA] py-14 border-b border-brm-border/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Column 1: Como funciona (4 steps) */}
-          <div className="lg:col-span-5 bg-white rounded-2xl p-6 border border-rbm-border shadow-sm flex flex-col justify-between">
+          <div className="lg:col-span-5 bg-white rounded-2xl p-6 border border-brm-border shadow-sm flex flex-col justify-between">
             <div>
-              <h2 className="text-lg font-extrabold font-heading text-rbm-navy mb-6">
+              <h2 className="text-lg font-extrabold font-heading text-brm-navy mb-6">
                 Como funciona
               </h2>
 
@@ -25,7 +25,7 @@ export const ProcessSection: React.FC = () => {
                       <div className="w-8 h-8 rounded-full bg-[#0754A6] text-white font-bold font-heading text-xs flex items-center justify-center shadow-sm shrink-0">
                         {step.number}
                       </div>
-                      <h3 className="text-xs font-bold font-heading text-rbm-navy">
+                      <h3 className="text-xs font-bold font-heading text-brm-navy">
                         {step.title}
                       </h3>
                     </div>
@@ -39,8 +39,8 @@ export const ProcessSection: React.FC = () => {
           </div>
 
           {/* Column 2: Nossos diferenciais */}
-          <div className="lg:col-span-3 bg-white rounded-2xl p-6 border border-rbm-border shadow-sm">
-            <h2 className="text-lg font-extrabold font-heading text-rbm-navy mb-5">
+          <div className="lg:col-span-3 bg-white rounded-2xl p-6 border border-brm-border shadow-sm">
+            <h2 className="text-lg font-extrabold font-heading text-brm-navy mb-5">
               Nossos diferenciais
             </h2>
 
@@ -55,10 +55,10 @@ export const ProcessSection: React.FC = () => {
           </div>
 
           {/* Column 3: Resultados que geram confiança */}
-          <div className="lg:col-span-4 bg-white rounded-2xl p-6 border border-rbm-border shadow-sm flex flex-col justify-between">
+          <div className="lg:col-span-4 bg-white rounded-2xl p-6 border border-brm-border shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-extrabold font-heading text-rbm-navy">
+                <h2 className="text-lg font-extrabold font-heading text-brm-navy">
                   Resultados que geram confiança
                 </h2>
                 <Link
@@ -76,7 +76,7 @@ export const ProcessSection: React.FC = () => {
                     className="p-3 bg-gray-50 rounded-xl border border-gray-100 flex flex-col justify-between hover:bg-blue-50/50 transition-colors"
                   >
                     <div>
-                      <div className="flex items-center space-x-1.5 text-xs font-bold font-heading text-rbm-navy mb-1">
+                      <div className="flex items-center space-x-1.5 text-xs font-bold font-heading text-brm-navy mb-1">
                         <TrendingUp className="w-3.5 h-3.5 text-orange-500 shrink-0" />
                         <span>{c.clientName}</span>
                       </div>

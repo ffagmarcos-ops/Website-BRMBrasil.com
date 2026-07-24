@@ -15,13 +15,13 @@ export const Logo: React.FC<LogoProps> = ({
   width = 220,
   height = 52,
 }) => {
-  const logoPath = variant === "light" ? "/images/logo-rbm-light.svg" : "/images/logo-rbm.svg";
+  const logoPath = variant === "light" ? "/images/logo-brm-light.svg" : "/images/logo-brm.svg";
 
   return (
     <Link href="/" className={`inline-flex items-center group transition-opacity hover:opacity-95 ${className}`}>
       <Image
         src={logoPath}
-        alt="Grupo RBM - Soluções Integradas"
+        alt="Grupo BRM - Soluções Integradas"
         width={width}
         height={height}
         className="h-auto w-auto max-h-[48px] md:max-h-[56px] object-contain"

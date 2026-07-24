@@ -6,8 +6,8 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { companies } from "@/data/companies";
 
 export const metadata: Metadata = {
-  title: "Empresas do Grupo | Grupo RBM",
-  description: "Conheça as 5 empresas especializadas do Grupo RBM: Contabilidade, M.O Publicidade, Desenvolvimento, DIGMIDIA e Sistemas para Supermercados.",
+  title: "Empresas do Grupo | Grupo BRM",
+  description: "Conheça as 5 empresas especializadas do Grupo BRM: Contabilidade, M.O Publicidade, Desenvolvimento, DIGMIDIA e Sistemas para Supermercados.",
 };
 
 export default function EmpresasPage() {
@@ -17,8 +17,8 @@ export default function EmpresasPage() {
         <Breadcrumb items={[{ label: "Empresas do Grupo" }]} />
 
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <h1 className="text-3xl sm:text-4xl font-black font-heading text-rbm-navy">
-            Empresas do Grupo RBM
+          <h1 className="text-3xl sm:text-4xl font-black font-heading text-brm-navy">
+            Empresas do Grupo BRM
           </h1>
           <p className="text-sm text-gray-600 leading-relaxed">
             Cinco empresas especialistas unidas sob uma governança sólida para oferecer atendimento completo, estratégico e resultados mensuráveis.
@@ -29,7 +29,7 @@ export default function EmpresasPage() {
           {companies.map((c) => (
             <div
               key={c.id}
-              className="bg-white rounded-3xl p-7 border border-rbm-border shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-3xl p-7 border border-brm-border shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
             >
               <div className="space-y-4">
                 <div

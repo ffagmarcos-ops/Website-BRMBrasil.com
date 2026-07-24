@@ -76,7 +76,7 @@ export const ContactForm: React.FC<{ compact?: boolean }> = ({ compact = false }
         <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
         <h3 className="text-xl font-bold font-heading text-white">Mensagem Enviada com Sucesso!</h3>
         <p className="text-sm text-emerald-100 max-w-md mx-auto">
-          Obrigado pelo contato! Nossa equipe de especialistas do Grupo RBM retornará em breve.
+          Obrigado pelo contato! Nossa equipe de especialistas do Grupo BRM retornará em breve.
         </p>
         <button
           onClick={() => setSubmitSuccess(false)}
@@ -183,7 +183,7 @@ export const ContactForm: React.FC<{ compact?: boolean }> = ({ compact = false }
               <input
                 {...register("name")}
                 type="text"
-                className="w-full px-4 py-3 rounded-xl border border-rbm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
+                className="w-full px-4 py-3 rounded-xl border border-brm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
                 placeholder="Seu nome"
               />
               {errors.name && <span className="text-xs text-red-500 mt-1 block">{errors.name.message}</span>}
@@ -194,7 +194,7 @@ export const ContactForm: React.FC<{ compact?: boolean }> = ({ compact = false }
               <input
                 {...register("email")}
                 type="email"
-                className="w-full px-4 py-3 rounded-xl border border-rbm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
+                className="w-full px-4 py-3 rounded-xl border border-brm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
                 placeholder="seu.email@empresa.com.br"
               />
               {errors.email && <span className="text-xs text-red-500 mt-1 block">{errors.email.message}</span>}
@@ -207,7 +207,7 @@ export const ContactForm: React.FC<{ compact?: boolean }> = ({ compact = false }
               <input
                 {...register("phone")}
                 type="tel"
-                className="w-full px-4 py-3 rounded-xl border border-rbm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
+                className="w-full px-4 py-3 rounded-xl border border-brm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
                 placeholder="(11) 99999-9999"
               />
               {errors.phone && <span className="text-xs text-red-500 mt-1 block">{errors.phone.message}</span>}
@@ -218,7 +218,7 @@ export const ContactForm: React.FC<{ compact?: boolean }> = ({ compact = false }
               <input
                 {...register("company")}
                 type="text"
-                className="w-full px-4 py-3 rounded-xl border border-rbm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
+                className="w-full px-4 py-3 rounded-xl border border-brm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
                 placeholder="Sua empresa"
               />
             </div>
@@ -228,9 +228,9 @@ export const ContactForm: React.FC<{ compact?: boolean }> = ({ compact = false }
             <label className="block text-xs font-semibold text-gray-700 mb-1">Área de Interesse*</label>
             <select
               {...register("interestArea")}
-              className="w-full px-4 py-3 rounded-xl border border-rbm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
+              className="w-full px-4 py-3 rounded-xl border border-brm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
             >
-              <option value="solucoes-integradas">Soluções integradas Grupo RBM</option>
+              <option value="solucoes-integradas">Soluções integradas Grupo BRM</option>
               <option value="contabilidade">Contabilidade</option>
               <option value="mo-publicidade">M.O Publicidade</option>
               <option value="desenvolvimento">Desenvolvimento de software</option>
@@ -245,7 +245,7 @@ export const ContactForm: React.FC<{ compact?: boolean }> = ({ compact = false }
             <textarea
               {...register("message")}
               rows={4}
-              className="w-full px-4 py-3 rounded-xl border border-rbm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
+              className="w-full px-4 py-3 rounded-xl border border-brm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
               placeholder="Como podemos ajudar o seu negócio?"
             />
             {errors.message && <span className="text-xs text-red-500 mt-1 block">{errors.message.message}</span>}

@@ -1,5 +1,5 @@
 /**
- * GRUPO RBM - MAIN JAVASCRIPT
+ * GRUPO BRM - MAIN JAVASCRIPT
  */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
             successMsg.classList.add("hidden");
           }, 5000);
         } else {
-          alert("Mensagem enviada com sucesso! Em breve um especialista do Grupo RBM entrará em contato.");
+          alert("Mensagem enviada com sucesso! Em breve um especialista do Grupo BRM entrará em contato.");
         }
       }, 1000);
     });

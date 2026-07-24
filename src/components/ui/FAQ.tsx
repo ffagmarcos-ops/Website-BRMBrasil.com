@@ -19,7 +19,7 @@ export const FAQ: React.FC<FAQProps> = ({ items, title = "Perguntas Frequentes" 
   return (
     <div className="space-y-4">
       {title && (
-        <h3 className="text-xl font-bold font-heading text-rbm-navy mb-4">
+        <h3 className="text-xl font-bold font-heading text-brm-navy mb-4">
           {title}
         </h3>
       )}
@@ -30,12 +30,12 @@ export const FAQ: React.FC<FAQProps> = ({ items, title = "Perguntas Frequentes" 
           return (
             <div
               key={item.id}
-              className="bg-white rounded-xl border border-rbm-border overflow-hidden transition-all duration-200"
+              className="bg-white rounded-xl border border-brm-border overflow-hidden transition-all duration-200"
             >
               <button
                 type="button"
                 onClick={() => toggle(idx)}
-                className="w-full px-5 py-4 text-left flex items-center justify-between font-heading font-semibold text-sm text-rbm-navy hover:bg-gray-50 focus:outline-none"
+                className="w-full px-5 py-4 text-left flex items-center justify-between font-heading font-semibold text-sm text-brm-navy hover:bg-gray-50 focus:outline-none"
               >
                 <span>{item.question}</span>
                 <ChevronDown

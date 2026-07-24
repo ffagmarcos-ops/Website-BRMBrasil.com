@@ -17,7 +17,7 @@ export const ContactCTA: React.FC = () => {
             </h2>
 
             <p className="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
-              Fale com nossos especialistas e descubra como o Grupo RBM pode conectar soluções para gerar resultados reais para a sua empresa.
+              Fale com nossos especialistas e descubra como o Grupo BRM pode conectar soluções para gerar resultados reais para a sua empresa.
             </p>
 
             <div className="pt-2">

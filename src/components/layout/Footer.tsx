@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand Logo & Slogan */}
           <div className="md:col-span-1 space-y-4">
             <Logo variant="light" width={200} height={48} />
-            <p className="text-xs font-semibold text-rbm-lime tracking-wide leading-relaxed uppercase">
+            <p className="text-xs font-semibold text-brm-lime tracking-wide leading-relaxed uppercase">
               {siteConfig.slogan}
             </p>
             <p className="text-xs text-gray-300 leading-relaxed">
@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-sm text-gray-300">
               {mainNav.map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="hover:text-rbm-lime transition-colors">
+                  <Link href={item.href} className="hover:text-brm-lime transition-colors">
                     {item.label}
                   </Link>
                 </li>
@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
                 href={siteConfig.socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn do Grupo RBM"
+                aria-label="LinkedIn do Grupo BRM"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#0754A6] flex items-center justify-center transition-colors"
               >
                 <Linkedin className="w-4 h-4 text-white" />
@@ -93,7 +93,7 @@ export const Footer: React.FC = () => {
                 href={siteConfig.socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram do Grupo RBM"
+                aria-label="Instagram do Grupo BRM"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#F36C0A] flex items-center justify-center transition-colors"
               >
                 <Instagram className="w-4 h-4 text-white" />
@@ -102,7 +102,7 @@ export const Footer: React.FC = () => {
                 href={siteConfig.socialLinks.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook do Grupo RBM"
+                aria-label="Facebook do Grupo BRM"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#0878D1] flex items-center justify-center transition-colors"
               >
                 <Facebook className="w-4 h-4 text-white" />
@@ -113,7 +113,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar: Copyright & Legal */}
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-400 gap-4">
-          <p>© {currentYear} Grupo RBM. Todos os direitos reservados.</p>
+          <p>© {currentYear} Grupo BRM. Todos os direitos reservados.</p>
           <div className="flex items-center space-x-6">
             <Link href="/politica-de-privacidade" className="hover:text-white transition-colors">
               Política de Privacidade

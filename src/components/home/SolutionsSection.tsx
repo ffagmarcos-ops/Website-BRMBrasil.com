@@ -29,9 +29,9 @@ export const SolutionsSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-white py-14 border-b border-rbm-border">
+    <section className="bg-white py-14 border-b border-brm-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-xl sm:text-2xl font-extrabold font-heading text-rbm-navy mb-8">
+        <h2 className="text-xl sm:text-2xl font-extrabold font-heading text-brm-navy mb-8">
           Soluções para Empresas
         </h2>
 
@@ -39,13 +39,13 @@ export const SolutionsSection: React.FC = () => {
           {solutionsData.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl p-5 border border-rbm-border/80 shadow-sm hover:shadow-card transition-all duration-200 flex flex-col space-y-3"
+              className="bg-white rounded-xl p-5 border border-brm-border/80 shadow-sm hover:shadow-card transition-all duration-200 flex flex-col space-y-3"
             >
               <div className="flex items-center space-x-3">
                 <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-100 shrink-0">
                   {getIcon(item.iconName)}
                 </div>
-                <h3 className="text-sm font-bold font-heading text-rbm-navy leading-snug">
+                <h3 className="text-sm font-bold font-heading text-brm-navy leading-snug">
                   {item.title}
                 </h3>
               </div>

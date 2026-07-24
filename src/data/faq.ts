@@ -8,8 +8,8 @@ export interface FAQItem {
 export const generalFaqs: FAQItem[] = [
   {
     id: "faq-1",
-    question: "O Grupo RBM atende apenas supermercados?",
-    answer: "Não! O Grupo RBM atende empresas de diversos setores (indústria, comércio, serviços, varejo). O segmento de supermercados é uma das nossas especialidades através da empresa de sistemas para varejo alimentar, mas oferecemos contabilidade, marketing, desenvolvimento de software e mídia digital para todos os ramos.",
+    question: "O Grupo BRM atende apenas supermercados?",
+    answer: "Não! O Grupo BRM atende empresas de diversos setores (indústria, comércio, serviços, varejo). O segmento de supermercados é uma das nossas especialidades através da empresa de sistemas para varejo alimentar, mas oferecemos contabilidade, marketing, desenvolvimento de software e mídia digital para todos os ramos.",
   },
   {
     id: "faq-2",
@@ -18,7 +18,7 @@ export const generalFaqs: FAQItem[] = [
   },
   {
     id: "faq-3",
-    question: "Terei um ponto de contato único no Grupo RBM?",
+    question: "Terei um ponto de contato único no Grupo BRM?",
     answer: "Sim! Ao contratar soluções integradas, disponibilizamos um gestor de conta dedicado que coordena a entrega dos projetos entre as equipes de contabilidade, marketing, tecnologia e mídia.",
   },
   {

@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
-        isScrolled ? "shadow-md py-2.5" : "border-b border-rbm-border/60 py-3.5"
+        isScrolled ? "shadow-md py-2.5" : "border-b border-brm-border/60 py-3.5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -56,7 +56,7 @@ export const Header: React.FC = () => {
                     className={`inline-flex items-center px-3 py-2 text-sm font-medium font-heading rounded-md transition-colors ${
                       isActive
                         ? "text-[#0754A6] font-bold border-b-2 border-[#0754A6]"
-                        : "text-rbm-dark hover:text-[#0754A6]"
+                        : "text-brm-dark hover:text-[#0754A6]"
                     }`}
                   >
                     <span>{item.label}</span>
@@ -71,14 +71,14 @@ export const Header: React.FC = () => {
                         : "opacity-0 scale-95 pointer-events-none"
                     }`}
                   >
-                    <div className="bg-white rounded-xl shadow-xl border border-rbm-border p-2 space-y-1">
+                    <div className="bg-white rounded-xl shadow-xl border border-brm-border p-2 space-y-1">
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.label}
                           href={subItem.href}
-                          className="block px-3 py-2.5 rounded-lg hover:bg-rbm-light transition-colors group/sub"
+                          className="block px-3 py-2.5 rounded-lg hover:bg-brm-light transition-colors group/sub"
                         >
-                          <div className="text-sm font-semibold font-heading text-rbm-dark group-hover/sub:text-[#0754A6]">
+                          <div className="text-sm font-semibold font-heading text-brm-dark group-hover/sub:text-[#0754A6]">
                             {subItem.label}
                           </div>
                           {subItem.description && (
@@ -99,7 +99,7 @@ export const Header: React.FC = () => {
                 className={`px-3 py-2 text-sm font-medium font-heading transition-colors relative ${
                   isActive
                     ? "text-[#0754A6] font-bold after:content-[''] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-[#0754A6]"
-                    : "text-rbm-dark hover:text-[#0754A6]"
+                    : "text-brm-dark hover:text-[#0754A6]"
                 }`}
               >
                 {item.label}
@@ -118,17 +118,17 @@ export const Header: React.FC = () => {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-rbm-dark hover:bg-rbm-light focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
+            className="md:hidden p-2 rounded-lg text-brm-dark hover:bg-brm-light focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
             aria-label="Abrir Menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6 text-rbm-dark" /> : <Menu className="w-6 h-6 text-rbm-dark" />}
+            {mobileMenuOpen ? <X className="w-6 h-6 text-brm-dark" /> : <Menu className="w-6 h-6 text-brm-dark" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu Panel */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-rbm-border px-4 pt-3 pb-6 space-y-3">
+        <div className="md:hidden bg-white border-b border-brm-border px-4 pt-3 pb-6 space-y-3">
           <div className="space-y-1">
             {mainNav.map((item) => (
               <div key={item.label}>
@@ -136,14 +136,14 @@ export const Header: React.FC = () => {
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block px-3 py-2.5 text-base font-semibold font-heading rounded-lg ${
-                    pathname === item.href ? "bg-blue-50 text-[#0754A6]" : "text-rbm-dark hover:bg-rbm-light"
+                    pathname === item.href ? "bg-blue-50 text-[#0754A6]" : "text-brm-dark hover:bg-brm-light"
                   }`}
                 >
                   {item.label}
                 </Link>
 
                 {item.submenu && (
-                  <div className="pl-4 ml-2 border-l-2 border-rbm-border space-y-1 my-1">
+                  <div className="pl-4 ml-2 border-l-2 border-brm-border space-y-1 my-1">
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.label}
@@ -160,7 +160,7 @@ export const Header: React.FC = () => {
             ))}
           </div>
 
-          <div className="pt-3 border-t border-rbm-border">
+          <div className="pt-3 border-t border-brm-border">
             <WhatsAppButton text="Fale Conosco pelo WhatsApp" variant="green" size="md" className="w-full" />
           </div>
         </div>

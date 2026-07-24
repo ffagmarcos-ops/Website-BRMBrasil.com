@@ -40,7 +40,7 @@ export async function POST(request: Request) {
      * Aqui você pode conectar com seu provedor de e-mail (Resend, SendGrid, Nodemailer),
      * sistema de CRM (Hubspot, RD Station) ou webhook de WhatsApp.
      */
-    console.log("[NOVO CONTATO SITE GRUPO RBM]", {
+    console.log("[NOVO CONTATO SITE GRUPO BRM]", {
       timestamp: new Date().toISOString(),
       name,
       email,

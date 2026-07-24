@@ -38,8 +38,8 @@ export const aboutStats: StatItem[] = [
 ];
 
 export const aboutContent = {
-  title: "Sobre o Grupo RBM",
-  paragraph1: "O Grupo RBM conecta cinco empresas especializadas que trabalham de forma integrada para oferecer soluções completas e personalizadas para empresas, negócios e varejo.",
+  title: "Sobre o Grupo BRM",
+  paragraph1: "O Grupo BRM conecta cinco empresas especializadas que trabalham de forma integrada para oferecer soluções completas e personalizadas para empresas, negócios e varejo.",
   paragraph2: "Nosso propósito é unir conhecimento, criatividade, tecnologia e experiência em gestão para impulsionar resultados reais e construir parcerias de longo prazo.",
   mission: "Conectar soluções inteligentes e tecnologia de ponta para potencializar o crescimento sustentável de empresas e organizações de diversos segmentos.",
   vision: "Ser reconhecido nacionalmente como um ecossistema empresarial integrado referência em gestão, inovação tecnológica e comunicação estratégica.",

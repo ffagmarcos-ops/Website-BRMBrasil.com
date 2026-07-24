@@ -9,7 +9,7 @@ export default function NotFound() {
         <div className="w-20 h-20 bg-blue-50 text-[#0754A6] rounded-full flex items-center justify-center mx-auto text-3xl font-black font-heading shadow-inner">
           404
         </div>
-        <h1 className="text-2xl sm:text-3xl font-black font-heading text-rbm-navy">
+        <h1 className="text-2xl sm:text-3xl font-black font-heading text-brm-navy">
           Página não encontrada
         </h1>
         <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">

@@ -31,13 +31,13 @@ export const CompanyCards: React.FC = () => {
   };
 
   return (
-    <section className="bg-white py-12 border-b border-rbm-border">
+    <section className="bg-white py-12 border-b border-brm-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
           {companies.map((company: Company) => (
             <div
               key={company.id}
-              className="bg-white rounded-2xl p-6 border border-rbm-border/80 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-2xl p-6 border border-brm-border/80 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 {/* Icon Circle */}

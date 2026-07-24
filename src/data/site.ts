@@ -9,21 +9,21 @@ export interface NavItem {
 }
 
 export const siteConfig = {
-  name: "Grupo RBM",
+  name: "Grupo BRM",
   slogan: "Conectamos soluções. Potencializamos resultados.",
   tagline: "Soluções integradas para impulsionar empresas e negócios.",
   description: "Tecnologia, estratégia, comunicação e gestão trabalhando juntas para gerar resultados reais e crescimento sustentável.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://gruporbm.com.br",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://grupobrm.com.br",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511999999999",
-  defaultWhatsAppMessage: "Olá! Conheci o Grupo RBM pelo site e gostaria de saber mais sobre as soluções.",
-  contactEmail: "contato@gruporbm.com.br",
+  defaultWhatsAppMessage: "Olá! Conheci o Grupo BRM pelo site e gostaria de saber mais sobre as soluções.",
+  contactEmail: "contato@grupobrm.com.br",
   contactPhone: "(11) 99999-9999",
   address: "Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100",
   workingHours: "Segunda a Sexta, das 08h às 18h",
   socialLinks: {
-    linkedin: "https://linkedin.com/company/gruporbm",
-    instagram: "https://instagram.com/gruporbm",
-    facebook: "https://facebook.com/gruporbm",
+    linkedin: "https://linkedin.com/company/grupobrm",
+    instagram: "https://instagram.com/grupobrm",
+    facebook: "https://facebook.com/grupobrm",
   },
 };
 

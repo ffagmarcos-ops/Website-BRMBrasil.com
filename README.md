@@ -1,6 +1,6 @@
-# Grupo RBM - Website Institucional
+# Grupo BRM - Website Institucional
 
-Site institucional completo, moderno, responsivo e de alta fidelidade visual desenvolvido para o **Grupo RBM** (Contabilidade, M.O Publicidade, Desenvolvimento, DIGMIDIA e Sistemas para Supermercados).
+Site institucional completo, moderno, responsivo e de alta fidelidade visual desenvolvido para o **Grupo BRM** (Contabilidade, M.O Publicidade, Desenvolvimento, DIGMIDIA e Sistemas para Supermercados).
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -17,12 +17,12 @@ Site institucional completo, moderno, responsivo e de alta fidelidade visual des
 ## 📁 Estrutura de Pastas
 
 ```
-SITE GRUPO RBM/
+SITE GRUPO BRM/
 ├── public/
 │   ├── images/
-│   │   ├── logo-rbm.svg          # Logo vetorial oficial em fundo claro
-│   │   ├── logo-rbm-light.svg    # Logo vetorial para rodapé / fundo escuro
-│   │   └── escritorio-rbm.jpg    # Imagem corporativa do banner principal
+│   │   ├── logo-brm.svg          # Logo vetorial oficial em fundo claro
+│   │   ├── logo-brm-light.svg    # Logo vetorial para rodapé / fundo escuro
+│   │   └── escritorio-brm.jpg    # Imagem corporativa do banner principal
 ├── src/
 │   ├── app/
 │   │   ├── api/
@@ -82,7 +82,7 @@ SITE GRUPO RBM/
 
 1. **Clonar ou acessar a pasta do projeto**:
    ```bash
-   cd "SITE GRUPO RBM"
+   cd "SITE GRUPO BRM"
    ```
 
 2. **Instalar as dependências**:
@@ -123,11 +123,11 @@ Toda a camada de dados foi centralizada na pasta `src/data/`, permitindo alterar
 ## 🎨 Como Substituir Logos e Imagens
 
 - **Logo Principal (Versão Clara / Fundo Branco)**:
-  Substitua o arquivo vetorial em `public/images/logo-rbm.svg`.
+  Substitua o arquivo vetorial em `public/images/logo-brm.svg`.
 - **Logo Secundária (Versão Rodapé / Fundo Escuro)**:
-  Substitua o arquivo em `public/images/logo-rbm-light.svg`.
+  Substitua o arquivo em `public/images/logo-brm-light.svg`.
 - **Fotografia do Escritório Corporativo (Banner)**:
-  Substitua a imagem em `public/images/escritorio-rbm.jpg`.
+  Substitua a imagem em `public/images/escritorio-brm.jpg`.
 
 ---
 

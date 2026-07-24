@@ -21,7 +21,7 @@ export const AboutSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-[#F5F7FA] py-16 border-b border-rbm-border/60">
+    <section className="bg-[#F5F7FA] py-16 border-b border-brm-border/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Logo & Text */}
@@ -30,7 +30,7 @@ export const AboutSection: React.FC = () => {
               <Logo width={210} height={50} />
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-rbm-navy">
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-brm-navy">
               {aboutContent.title}
             </h2>
 
@@ -45,12 +45,12 @@ export const AboutSection: React.FC = () => {
             {aboutStats.map((stat) => (
               <div
                 key={stat.id}
-                className="bg-white rounded-xl p-5 border border-rbm-border shadow-sm hover:shadow-md transition-all text-center flex flex-col items-center justify-center space-y-2 group"
+                className="bg-white rounded-xl p-5 border border-brm-border shadow-sm hover:shadow-md transition-all text-center flex flex-col items-center justify-center space-y-2 group"
               >
                 <div className="p-3 rounded-full bg-blue-50 group-hover:bg-[#0754A6]/10 transition-colors">
                   {getIcon(stat.iconName)}
                 </div>
-                <div className="text-2xl sm:text-3xl font-black font-heading text-rbm-navy">
+                <div className="text-2xl sm:text-3xl font-black font-heading text-brm-navy">
                   {stat.value}
                 </div>
                 <div className="text-xs font-semibold text-gray-600 font-heading">
