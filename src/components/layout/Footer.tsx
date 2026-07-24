@@ -43,8 +43,8 @@ export const Footer: React.FC = () => {
             <h4 className="text-sm font-bold font-heading uppercase text-white tracking-wider">Empresas do Grupo</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <Link href="/empresas/contabilidade" className="hover:text-emerald-400 transition-colors">
-                  Contabilidade
+                <Link href="/empresas/sistemas" className="hover:text-cyan-400 transition-colors">
+                  Sistemas
                 </Link>
               </li>
               <li>
@@ -63,8 +63,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/empresas/sistemas" className="hover:text-cyan-400 transition-colors">
-                  Sistemas
+                <Link href="/empresas/contabilidade" className="hover:text-emerald-400 transition-colors">
+                  Contabilidade
                 </Link>
               </li>
             </ul>

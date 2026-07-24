@@ -34,11 +34,11 @@ export const mainNav: NavItem[] = [
     label: "Soluções",
     href: "/solucoes",
     submenu: [
-      { label: "Gestão empresarial", href: "/solucoes#gestao", description: "Otimização de processos e alta performance" },
+      { label: "Sistemas", href: "/solucoes#sistemas", description: "PDV, frente de caixa e gestão comercial" },
       { label: "Marketing e comunicação", href: "/solucoes#marketing", description: "Posicionamento de marca e crescimento" },
       { label: "Desenvolvimento de software", href: "/solucoes#desenvolvimento", description: "Sistemas e aplicativos sob medida" },
       { label: "Soluções digitais", href: "/solucoes#digmidia", description: "TV indoor, EAD e sinalização digital" },
-      { label: "Sistemas", href: "/solucoes#sistemas", description: "PDV, frente de caixa e gestão comercial" },
+      { label: "Gestão empresarial (Contabilidade)", href: "/solucoes#gestao", description: "Otimização tributária e inteligência financeira" },
     ],
   },
   { label: "Empresas", href: "/empresas" },
