@@ -29,6 +29,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# OS store files
+# OS store files & archives
 .DS_Store
 Thumbs.db
+*.zip
+*.rar
+*.tar.gz
+
