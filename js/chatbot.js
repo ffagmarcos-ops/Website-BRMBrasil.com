@@ -3,7 +3,7 @@
    ========================================================================== */
 
 (function () {
-  // Base de Conhecimento com Tom de Conversa Humano e Variações Fluídas
+  // Base de Conhecimento Incorporada no Script (Com respostas introdutórias sobre cada assunto e empresa)
   const DEFAULT_KNOWLEDGE = {
     "group_info": {
       "name": "Grupo BRM",
@@ -18,12 +18,79 @@
       "Olá! Seja muito bem-vindo(a) ao Grupo BRM! 👋 Sou o assistente virtual da empresa. Como posso te ajudar hoje?",
       "Oi! Que ótimo ter você por aqui! 😊 Sou o atendente virtual do Grupo BRM. Sobre qual assunto ou empresa você gostaria de conversar?"
     ],
-    "hooks": [
-      "Excelente pergunta! ",
-      "Entendi perfeitamente o seu ponto. ",
-      "Com certeza! Essa é uma dúvida muito importante. ",
-      "Ótima colocação! ",
-      "Perfeito! Vou te explicar exatamente como funciona. "
+    "topic_intros": [
+      {
+        "topic": "social_media",
+        "company": "M.O Publicidade",
+        "triggers": ["social media", "redes sociais", "instagram", "facebook", "postagens", "gestao de redes", "posts", "reels", "midias sociais", "feed"],
+        "answers": [
+          "Com certeza! Quando o assunto é **Social Media e Redes Sociais**, a **M.O Publicidade** é a nossa agência especialista! 📢\n\nCuidamos do planejamento editorial, criação de artes profissionais, edição de vídeos para Reels/Shorts, cópias persuasivas e gestão de tráfego pago no Instagram e Facebook para atrair clientes reais diariamente para o seu negócio.",
+          "Excelente! Para **Redes Sociais e Social Media**, a **M.O Publicidade** desenvolve toda a estratégia da sua marca! Ajudamos sua empresa a criar conteúdo profissional, aumentar o engajamento e transformar seguidores em compradores."
+        ]
+      },
+      {
+        "topic": "anuncios_trafego",
+        "company": "M.O Publicidade",
+        "triggers": ["google ads", "anuncios", "trafego pago", "meta ads", "divulgar no google", "patrocinado", "anunciar", "vender mais"],
+        "answers": [
+          "Ótima escolha! Se você deseja **Anúncios e Tráfego Pago**, a **M.O Publicidade** cria campanhas focadas em vendas reais! 🎯\n\nGerenciamos anúncios no Google Ads (para alcançar quem já pesquisa por seus serviços) e Meta Ads/TikTok Ads (para criar desejo e gerar leads diários).",
+          "Perfeito! A **M.O Publicidade** é especialista em estratégias de tráfego de alta performance. Otimizamos diariamente seu investimento para garantir o maior retorno financeiro possível para o seu negócio."
+        ]
+      },
+      {
+        "topic": "branding_logo",
+        "company": "M.O Publicidade",
+        "triggers": ["criar logo", "logotipo", "identidade visual", "manual de marca", "branding", "criar marca", "redesign"],
+        "answers": [
+          "Sensacional! Se você precisa de **Branding, Logo ou Identidade Visual**, a **M.O Publicidade** constrói a imagem marcante da sua empresa! 🎨\n\nCriamos o logotipo profissional, paleta de cores, tipografia e o manual completo de marca para destacar seu negócio da concorrência.",
+          "Com certeza! A **M.O Publicidade** desenvolve identidades visuais modernas e alinhadas ao propósito do seu negócio, transmitindo autoridade e confiança desde o primeiro olhar dos clientes."
+        ]
+      },
+      {
+        "topic": "sistema_caixa_pdv",
+        "company": "Sistemas",
+        "triggers": ["sistema de caixa", "caixa", "pdv", "frente de caixa", "sistema de supermercado", "sistema comercial", "contingencia", "offline"],
+        "answers": [
+          "Excelente! Se você precisa de um **Sistema de Caixa e PDV**, a **Sistemas** é a nossa unidade focada exatamente nisso! 💻\n\nOferecemos uma frente de caixa ultra-rápida que não trava, contingência offline (seu caixa continua vendendo mesmo se a internet cair), emissão fiscal de notas (NFC-e, NF-e, SAT) e integração com balanças e TEF.",
+          "Perfeito! A **Sistemas** cuida de toda a automação comercial da sua loja ou supermercado. Nosso PDV é ágil, fácil de operar e garante controle total sobre as vendas, estoque e movimentações financeiras."
+        ]
+      },
+      {
+        "topic": "estoque_validade",
+        "company": "Sistemas",
+        "triggers": ["controle de estoque", "estoque", "lote", "validade", "inventario", "perdas de estoque", "produtos vencendo"],
+        "answers": [
+          "Com certeza! O **Controle de Estoque e Validade** é uma das maiores especialidades da **Sistemas**! 📦\n\nNosso software gerencia estoques por lote, alertando sobre produtos próximos do vencimento, realizando inventário cego, controle de entradas/saídas e auditoria de preços para evitar prejuízos.",
+          "Ótima colocação! Com a **Sistemas**, seu estoque fica 100% sob controle. Você acompanha a movimentação dos produtos em tempo real e reduz perdas com nosso gerenciador de validade e inventário."
+        ]
+      },
+      {
+        "topic": "criar_app_software",
+        "company": "Desenvolvimento",
+        "triggers": ["criar app", "criar aplicativo", "aplicativo", "software", "sistema web", "programa sob medida", "desenvolver sistema", "fábrica de software"],
+        "answers": [
+          "Sensacional! Se você quer **criar um Aplicativo ou Sistema Web Sob Medida**, a **Desenvolvimento** é a nossa fábrica de software dedicada! ⚙️\n\nDesenvolvemos aplicativos nativos e híbridos para iOS e Android, além de plataformas web em nuvem sob medida com protótipos de tela intuitivos, dashboards de BI e arquitetura escalável.",
+          "Perfeito! A **Desenvolvimento** transforma sua ideia ou processo corporativo em uma plataforma tecnológica exclusiva. Criamos sistemas e apps seguros, rápidos e preparados para crescer junto com sua empresa."
+        ]
+      },
+      {
+        "topic": "tv_indoor_telas",
+        "company": "DIGMIDIA",
+        "triggers": ["tv indoor", "telas", "totem", "totens", "encarte digital", "menu board", "cardapio digital", "sinalizacao digital"],
+        "answers": [
+          "Ótima escolha! Para **TV Indoor, Encartes Digitais e Totens**, a **DIGMIDIA** é a nossa empresa pioneira nessa tecnologia visual! 📺\n\nImplementamos redes de telas promocionais no ponto de venda, encartes digitais animados perfeitos para envio no WhatsApp e totens interativos touchscreen com gerenciamento 100% remoto via nuvem.",
+          "Com certeza! A **DIGMIDIA** moderniza a comunicação do seu estabelecimento. Você altera os preços, fotos de ofertas ou vídeos institucionais nas suas telas em segundos de qualquer lugar!"
+        ]
+      },
+      {
+        "topic": "reduzir_impostos_contabilidade",
+        "company": "Contabilidade",
+        "triggers": ["reduzir imposto", "pagar menos imposto", "impostos", "contabilidade", "planejamento tributario", "bpo financeiro", "folha", "esocial", "abrir empresa"],
+        "answers": [
+          "Entendi perfeitamente! Para **reduzir impostos e organizar a gestão fiscal**, a **Contabilidade** do Grupo BRM é especialista em Inteligência Tributária! 📊\n\nRealizamos estudo e planejamento fiscal completo para sua empresa pagar o menor imposto possível dentro da lei, além de oferecer BPO Financeiro (terceirização do setor financeiro) e gestão de folha eSocial.",
+          "Excelente! A **Contabilidade** vai muito além do básico. Nossa consultoria analisa seu enquadramento (Simples Nacional, Lucro Presumido ou Real) para recuperar créditos fiscais e diminuir sua carga tributária com total segurança jurídica."
+        ]
+      }
     ],
     "companies": {
       "sistemas": {
@@ -87,78 +154,6 @@
         ]
       },
       {
-        "intent": "pdv_offline_duvida",
-        "triggers": ["internet cair", "sem internet", "pdv trava", "pdv offline", "contingencia", "caixa parar"],
-        "answers": [
-          "Essa é uma preocupação super legítima! Nosso **PDV (Frente de Caixa)** possui tecnologia de contingência offline. Ou seja: se a internet da sua loja cair, o caixa continua vendendo e emitindo comprovantes normalmente sem travar. Quando a internet voltar, tudo se sincroniza automaticamente!",
-          "Fique tranquilo(a)! O sistema da **Sistemas** foi feito pensando no dia a dia real do varejo. Caso falhe a conexão, o PDV opera offline perfeitamente para que você nunca perca uma venda ou enfrente filas."
-        ]
-      },
-      {
-        "intent": "nota_fiscal_duvida",
-        "triggers": ["nota fiscal", "nfc-e", "nf-e", "sat", "sped", "emite nota"],
-        "answers": [
-          "Sim! O sistema emite todos os documentos fiscais exigidos pela legislação de forma 100% automática: **NFC-e, NF-e, SAT, Sped Fiscal e Bloco K**. É rápido e sem burocracia para o seu contador!",
-          "Com certeza! A emissão de notas (NFC-e / NF-e / SAT) é integrada diretamente ao fechamento de cada venda no PDV, gerando os arquivos de homologação fiscal com total segurança."
-        ]
-      },
-      {
-        "intent": "equipamentos_duvida",
-        "triggers": ["balanca", "leitor", "codigo de barras", "pinpad", "tef", "maquininha", "impressora"],
-        "answers": [
-          "Nosso sistema se conecta com os principais equipamentos do mercado! Funciona perfeitamente com balanças de checkout e etiquetadoras (Toledo, Filizola), leitores de código de barras, impressoras térmicas e TEF (máquina de cartão integrada ao caixa).",
-          "Pode ter certeza! Integramos nativamente com balanças comerciais, leitores, leitores de código QR/Barra e sistemas TEF de cartão, garantindo um processo de leitura e pagamento em poucos segundos."
-        ]
-      },
-      {
-        "intent": "anuncios_trafego_duvida",
-        "triggers": ["google ads", "instagram ads", "facebook ads", "tiktok ads", "anuncios", "trafego pago", "atrair clientes"],
-        "answers": [
-          "A **M.O Publicidade** cria e gerencia campanhas de tráfego pago focadas em conversão! Investimos estrategicamente no Google Ads para alcançar quem já procura seu serviço e no Instagram/Facebook Ads para gerar desejo e novos clientes.",
-          "Com a **M.O Publicidade**, seus anúncios aparecem para as pessoas certas na sua cidade ou em todo o Brasil. Cuidamos do design, dos textos e da otimização diária das campanhas para trazer o maior retorno sobre seu investimento."
-        ]
-      },
-      {
-        "intent": "criar_logo_duvida",
-        "triggers": ["criar logo", "logotipo", "identidade visual", "manual de marca", "branding"],
-        "answers": [
-          "Desenvolvemos toda a identidade visual da sua marca! A **M.O Publicidade** cria logotipos profissionais, paleta de cores, tipografia e o manual completo de marca para deixar sua empresa com presença marcante e profissional.",
-          "Com certeza! Uma marca forte transmite confiança. Nossa equipe de design cria o logotipo e toda a identidade visual alinhada ao posicionamento do seu negócio."
-        ]
-      },
-      {
-        "intent": "desenvolvimento_app_duvida",
-        "triggers": ["criar app", "criar aplicativo", "app ios android", "quanto custa um aplicativo", "desenvolver app"],
-        "answers": [
-          "Criamos aplicativos móveis nativos e híbridos para iOS e Android! A **Desenvolvimento** cuida de todas as etapas: desde o protótipo de telas (UX/UI), programação do código até a publicação oficial na App Store e Google Play.",
-          "Sensacional! Desenvolver um aplicativo exclusivo é um passo gigante para a empresa. Nossa fábrica de software mapeia sua ideia, cria a arquitetura em nuvem e entrega um aplicativo rápido, seguro e muito fácil de usar."
-        ]
-      },
-      {
-        "intent": "tv_indoor_encarte_duvida",
-        "triggers": ["tv indoor", "totem", "encarte digital", "menu board", "telas na loja", "sinalizacao"],
-        "answers": [
-          "A **DIGMIDIA** transforma a experiência na sua loja física! Instalamos redes de TV Indoor com programação dinâmica de ofertas, totens interativos touchscreen e encartes digitais animados perfeitos para divulgar no WhatsApp.",
-          "Com a **DIGMIDIA**, você atualiza o preço ou a foto de uma promoção em todas as telas da sua loja com poucos cliques de forma remota via nuvem. É moderno e atrai a atenção dos clientes no PDV!"
-        ]
-      },
-      {
-        "intent": "reduzir_impostos_duvida",
-        "triggers": ["reduzir imposto", "pagar menos imposto", "planejamento tributario", "recuperar credito", "sonegar nao", "impostos"],
-        "answers": [
-          "Nossa divisão de **Contabilidade** é especialista em Inteligência Tributária! Efetuamos um estudo completo do seu negócio para enquadrar a empresa no regime fiscal (Simples, Lucro Presumido ou Real) que pague o menor imposto possível dentro da lei.",
-          "Com um bom Planejamento Tributário da **Contabilidade**, muitas empresas descobrem que estavam pagando tributos a mais e conseguem reduzir custos de forma legal e imediata."
-        ]
-      },
-      {
-        "intent": "bpo_financeiro_duvida",
-        "triggers": ["bpo financeiro", "terceirizar financeiro", "contas a pagar", "fluxo de caixa", "contas a receber"],
-        "answers": [
-          "O **BPO Financeiro** da nossa Contabilidade assume a rotina operacional do seu setor financeiro! Cuidamos dos pagamentos, agendamentos, conciliação bancária diária e emissão de relatórios para você focar apenas em fazer o negócio crescer.",
-          "Com o BPO Financeiro, sua empresa ganha um setor financeiro profissional sem precisar contratar e treinar uma equipe interna. Tudo organizado com transparência total!"
-        ]
-      },
-      {
         "intent": "cases_resultados_duvida",
         "triggers": ["cases", "resultados", "clientes", "exemplos", "rede mais", "ecovarejo", "superfacil", "unipeças"],
         "answers": [
@@ -184,7 +179,7 @@
       }
     ],
     "fallbacks": [
-      "Entendi o seu ponto! Posso te responder em detalhes sobre **Sistemas** (PDV/caixa), **M.O Publicidade** (marketing/anúncios), **Desenvolvimento** (apps/softwares), **DIGMIDIA** (telas/TV indoor) ou **Contabilidade** (impostos/gestão). Sobre qual destas áreas você quer falar?",
+      "Entendi o seu ponto! Posso te responder em detalhes sobre **Sistemas** (PDV/caixa), **M.O Publicidade** (marketing/redes sociais/anúncios), **Desenvolvimento** (apps/softwares), **DIGMIDIA** (telas/TV indoor) ou **Contabilidade** (impostos/gestão). Sobre qual destas áreas você quer falar?",
       "Olha, para essa dúvida específica, posso te ajudar explicando como nossas soluções em tecnologia, publicidade ou contabilidade se aplicam ao seu negócio. O que você gostaria de analisar?"
     ]
   };
@@ -254,7 +249,7 @@
 
         <!-- Input Footer -->
         <form id="brm-chat-form" class="p-3 bg-white border-t border-gray-200 flex items-center space-x-2">
-          <input type="text" id="brm-chat-input" placeholder="Digite sua dúvida sobre o Grupo BRM ou serviços..." autocomplete="off" class="flex-1 px-4 py-2.5 rounded-full bg-gray-100 text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#1E4FA3]">
+          <input type="text" id="brm-chat-input" placeholder="Pergunte sobre social media, sistemas, impostos..." autocomplete="off" class="flex-1 px-4 py-2.5 rounded-full bg-gray-100 text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#1E4FA3]">
           <button type="submit" class="p-2.5 bg-[#19A37F] hover:bg-[#138366] text-white rounded-full transition-colors shadow-md flex items-center justify-center">
             <svg class="w-4 h-4 transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
@@ -308,13 +303,12 @@
     return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
   }
 
-  // Helper para selecionar variações de respostas aleatórias de forma natural
   function getRandomItem(arr) {
     if (!arr || !arr.length) return "";
     return arr[Math.floor(Math.random() * arr.length)];
   }
 
-  // 4. Engine Humano de Conversação
+  // 4. Processing Engine Inteligente (Topic Intros & Niche Queries)
   function processUserQuery(query) {
     const cleanQuery = normalizeStr(query);
 
@@ -323,7 +317,20 @@
       return;
     }
 
-    // A. Check Q&A Topics (Perguntas Específicas Frequentes)
+    // A. Check Specific Topic Intros FIRST (Connect Niche Query e.g. "social media" directly to the right company)
+    if (knowledgeData.topic_intros) {
+      for (const topicItem of knowledgeData.topic_intros) {
+        for (const trigger of topicItem.triggers) {
+          if (cleanQuery.includes(normalizeStr(trigger))) {
+            const answer = getRandomItem(topicItem.answers);
+            addMessage(answer, "bot");
+            return;
+          }
+        }
+      }
+    }
+
+    // B. Check Q&A Topics (Perguntas Frequentes)
     if (knowledgeData.qa_topics) {
       for (const topic of knowledgeData.qa_topics) {
         for (const trigger of topic.triggers) {
@@ -336,7 +343,7 @@
       }
     }
 
-    // B. Check Specific Companies (Empresas do Grupo)
+    // C. Check Specific Companies (Empresas do Grupo)
     const companyKeys = ["sistemas", "mo-publicidade", "desenvolvimento", "digmidia", "contabilidade"];
     for (const key of companyKeys) {
       const comp = knowledgeData.companies ? knowledgeData.companies[key] : null;
@@ -356,24 +363,10 @@
       }
 
       if (isMatch) {
-        const hook = getRandomItem(knowledgeData.hooks || [""]);
         const textVar = getRandomItem(comp.variations || [comp.summary]);
-        const responseText = `${hook}🏢 **Empresa ${comp.order}ª do Grupo: ${comp.name.toUpperCase()}**\n\n_${comp.tagline}_\n\n${textVar}`;
+        const responseText = `🏢 **Empresa ${comp.order}ª do Grupo: ${comp.name.toUpperCase()}**\n\n_${comp.tagline}_\n\n${textVar}`;
         addMessage(responseText, "bot");
         return;
-      }
-    }
-
-    // C. Check General Intents (Intenções Gerais)
-    if (knowledgeData.intents) {
-      for (const intentObj of knowledgeData.intents) {
-        for (const trigger of intentObj.triggers) {
-          if (cleanQuery.includes(normalizeStr(trigger))) {
-            const answer = getRandomItem(intentObj.responses);
-            addMessage(answer, "bot");
-            return;
-          }
-        }
       }
     }
 
