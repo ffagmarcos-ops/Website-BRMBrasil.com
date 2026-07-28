@@ -1,0 +1,121 @@
+{
+  "group_info": {
+    "name": "Grupo BRM",
+    "slogan": "Conexão que gera valor. Soluções que transformam.",
+    "description": "O Grupo BRM é um ecossistema empresarial focado em conectar negócios, tecnologia, gestão, comunicação e inteligência para impulsionar resultados sustentáveis.",
+    "address": "Av. Paulista, 1000 - São Paulo, SP",
+    "phone": "(11) 99999-9999",
+    "email": "contato@grupobrm.com.br",
+    "whatsapp_url": "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20atendente%20humano."
+  },
+  "companies": [
+    {
+      "id": "sistemas",
+      "order": 1,
+      "name": "Sistemas",
+      "tagline": "Sistemas comerciais para alta performance e frente de caixa",
+      "description": "Especializada em sistemas comerciais integrados, PDV, controle de estoque, automação de vendas e gestão financeira para o comércio e supermercados.",
+      "services": [
+        "Frente de caixa e PDV ultra-rápido",
+        "Controle de estoque centralizado",
+        "Emissão de NF-e, NFC-e e Sped Fiscal",
+        "Relatórios gerenciais e conciliação bancária"
+      ],
+      "keywords": ["sistemas", "sistema", "pdv", "supermercados", "estoque", "caixa", "vendas", "nfe"]
+    },
+    {
+      "id": "mo-publicidade",
+      "order": 2,
+      "name": "M.O Publicidade",
+      "tagline": "Estratégia de marca, marketing e posicionamento",
+      "description": "Agência de publicidade estratégica focada em posicionamento de marca, campanhas publicitárias, marketing de performance, gestão de redes sociais e branding.",
+      "services": [
+        "Branding e identidade visual",
+        "Campanhas publicitárias on/off",
+        "Marketing digital e anúncios patrocinados",
+        "Gestão de mídias sociais e conteúdo"
+      ],
+      "keywords": ["mo", "publicidade", "marketing", "propaganda", "branding", "redes sociais", "anuncios", "campanhas"]
+    },
+    {
+      "id": "desenvolvimento",
+      "order": 3,
+      "name": "Desenvolvimento",
+      "tagline": "Engenharia de software e aplicativos sob medida",
+      "description": "Fábrica de software especializada no desenvolvimento de plataformas web, aplicativos móveis (iOS/Android), APIs e automação de processos corporativos.",
+      "services": [
+        "Desenvolvimento de softwares web sob medida",
+        "Aplicativos móveis iOS e Android",
+        "Integrações de APIs e ERPs",
+        "Plataformas de EAD e portais corporativos"
+      ],
+      "keywords": ["desenvolvimento", "software", "app", "aplicativo", "web", "programacao", "api", "sistema sob medida"]
+    },
+    {
+      "id": "digmidia",
+      "order": 4,
+      "name": "DIGMIDIA",
+      "tagline": "Mídia digital indoor, sinalização e encartes interativos",
+      "description": "Pioneira em soluções de mídia digital indoor, redes de TV corporativa, sinalização digital dinâmica e encartes digitais para pontos de venda.",
+      "services": [
+        "TV indoor e totens digitais interativos",
+        "Encartes e catálogos digitais para ofertas",
+        "Rede de displays corporativos e menu boards",
+        "Gerenciamento remoto de conteúdo em tempo real"
+      ],
+      "keywords": ["digmidia", "midia digital", "tv indoor", "toten", "encartes", "sinalizacao", "displays", "menu board"]
+    },
+    {
+      "id": "contabilidade",
+      "order": 5,
+      "name": "Contabilidade",
+      "tagline": "Gestão contábil, inteligência tributária e finanças",
+      "description": "Consultoria e assessoria contábil completa, focada no planejamento tributário, gestão fiscal, folha de pagamento e auditoria para empresas.",
+      "services": [
+        "Planejamento tributário estratégico",
+        "Escrituração contábil e fiscal completa",
+        "Gestão de folha de pagamento e BPO financeiro",
+        "Abertura e reestruturação corporativa"
+      ],
+      "keywords": ["contabilidade", "contabil", "imposto", "tributario", "fiscal", "folha", "bpo", "auditoria", "abrir empresa"]
+    }
+  ],
+  "intents": [
+    {
+      "intent": "empresas_lista",
+      "triggers": ["quais sao as empresas", "empresas do grupo", "quais empresas", "quais sao os negocios", "lista de empresas"],
+      "responses": [
+        "O Grupo BRM é composto por 5 empresas altamente especializadas:\n\n1. 💻 **Sistemas** (PDV, frente de caixa e automação)\n2. 📢 **M.O Publicidade** (Marketing e comunicação)\n3. ⚙️ **Desenvolvimento** (Softwares e apps sob medida)\n4. 📺 **DIGMIDIA** (TV indoor e encartes digitais)\n5. 📊 **Contabilidade** (Gestão fiscal e tributária)\n\nSobre qual delas gostaria de saber mais detalhes?"
+      ]
+    },
+    {
+      "intent": "contato",
+      "triggers": ["contato", "telefone", "whatsapp", "email", "endereco", "onde fica", "falar com atendente", "humano"],
+      "responses": [
+        "📍 **Nosso Endereço**: Av. Paulista, 1000 - São Paulo, SP\n📞 **Telefone / WhatsApp**: (11) 99999-9999\n✉️ **E-mail**: contato@grupobrm.com.br\n\nSe preferir falar diretamente com um especialista humano no WhatsApp agora, basta clicar no botão abaixo!"
+      ]
+    },
+    {
+      "intent": "orcamento",
+      "triggers": ["orcamento", "preço", "valor", "contratar", "proposta", "comprar"],
+      "responses": [
+        "Ficaremos felizes em elaborar uma proposta sob medida para a sua empresa! Nossos especialistas analisam as necessidades do seu negócio para entregar a solução ideal.\n\nDeseja conectar-se com um consultor comercial no WhatsApp agora?"
+      ]
+    },
+    {
+      "intent": "grupobrm",
+      "triggers": ["grupo brm", "o que e o grupo brm", "sobre o grupo", "quem somos"],
+      "responses": [
+        "O **Grupo BRM** é um ecossistema empresarial que conecta soluções em tecnologia, marketing, software, mídia digital e gestão contábil.\n\nNosso lema é: *CONEXÃO QUE GERA VALOR. SOLUÇÕES QUE TRANSFORMAM.*"
+      ]
+    }
+  ],
+  "greetings": [
+    "Olá! Seja bem-vindo(a) ao Autoatendimento 24h do **Grupo BRM**! 👋 Como posso ajudar seu negócio hoje?",
+    "Olá! Que bom ter você aqui. Sou o assistente virtual do **Grupo BRM**. Como posso auxiliar a sua empresa hoje?"
+  ],
+  "fallbacks": [
+    "Entendi sua dúvida! Para responder com exatidão sobre esse assunto específico, recomendo falar direto com nossa equipe no WhatsApp humano.",
+    "Para obter detalhes específicos e propostas personalizadas, posso te direcionar imediatamente para um de nossos especialistas no WhatsApp!"
+  ]
+}
