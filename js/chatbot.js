@@ -3,11 +3,154 @@
    ========================================================================== */
 
 (function () {
-  let knowledgeData = null;
+  // Built-in Knowledge Base Fallback (Guarantees instant local file:// execution & zero CORS issues)
+  const DEFAULT_KNOWLEDGE = {
+    "group_info": {
+      "name": "Grupo BRM",
+      "slogan": "Conexão que gera valor. Soluções que transformam.",
+      "description": "O Grupo BRM é um ecossistema empresarial focado em conectar negócios, tecnologia, gestão, comunicação e inteligência para impulsionar resultados sustentáveis em empresas de todos os portes.",
+      "coverage": "Atendimento nacional em todo o Brasil",
+      "address": "Av. Paulista, 1000 - Bela Vista, São Paulo - SP",
+      "phone": "(11) 99999-9999",
+      "email": "contato@grupobrm.com.br",
+      "whatsapp_url": "https://wa.me/5511999999999?text=Ol%C3%A1!%20Vim%20pelo%20chatbot%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20atendente."
+    },
+    "companies": [
+      {
+        "id": "sistemas",
+        "order": 1,
+        "name": "Sistemas",
+        "tagline": "Sistemas comerciais para alta performance, frente de caixa e supermercados",
+        "description": "Especializada em sistemas comerciais integrados e gestão de varejo. Oferece controle total de frente de caixa (PDV), estoque em tempo real, emissão fiscal simplificada e relatórios de lucratividade para supermercados, atacados, lojas de conveniência e comércio em geral.",
+        "features": [
+          "Frente de Caixa (PDV) de altíssima velocidade e contingência offline",
+          "Controle de Estoque avançado com gestão de lotes, validade e inventário",
+          "Emissão de Documentos Fiscais (NF-e, NFC-e, SAT, Sped e Bloco K)",
+          "Integração com Balanças, Etiquetadoras e PinPads (TEF)",
+          "Conciliação bancária automática e controle de vendas no cartão"
+        ],
+        "target_audience": "Supermercados, hortifrutis, atacadistas, minimercados, lojas de conveniência e comércio varejista.",
+        "keywords": ["sistemas", "sistema", "pdv", "supermercado", "supermercados", "estoque", "caixa", "frente de caixa", "vendas", "nfe", "nfce", "tef", "balanca", "inventario", "comercio"]
+      },
+      {
+        "id": "mo-publicidade",
+        "order": 2,
+        "name": "M.O Publicidade",
+        "tagline": "Estratégia de marca, publicidade 360° e marketing de performance",
+        "description": "Agência de comunicação e publicidade estratégica focada no fortalecimento de marcas e aceleração de vendas. Desenvolve desde a criação de identidade visual até grandes campanhas de tráfego pago, redes sociais e materiais de ponto de venda.",
+        "features": [
+          "Branding, criação de logotipos e manual de identidade visual completo",
+          "Gestão de Tráfego Pago (Google Ads, Meta Ads - Instagram/Facebook, TikTok Ads)",
+          "Gestão de Mídias Sociais, criação de artes, vídeos e planejamento editorial",
+          "Campanhas publicitárias integradas (On-line e Off-line)",
+          "Produção de materiais impressos, promocionais e catálogo corporativo"
+        ],
+        "target_audience": "Empresas que desejam aumentar suas vendas, profissionalizar sua imagem institucional e dominar o mercado local ou nacional.",
+        "keywords": ["mo", "publicidade", "marketing", "propaganda", "branding", "redes sociais", "anuncios", "campanhas", "google ads", "instagram", "facebook", "identidade visual", "logo", "agencia"]
+      },
+      {
+        "id": "desenvolvimento",
+        "order": 3,
+        "name": "Desenvolvimento",
+        "tagline": "Engenharia de software, plataformas web e aplicativos sob medida",
+        "description": "Fábrica de software de alta performance focada em transformar processos complexos em plataformas intuitivas. Desenvolve sistemas web sob medida, aplicativos móveis para iOS e Android, integrações de APIs e ecossistemas de ensino EAD.",
+        "features": [
+          "Desenvolvimento de Aplicativos Móveis Nativos e Híbridos (iOS e Android)",
+          "Plataformas e Softwares Web Sob Medida em arquitetura Cloud",
+          "Sistemas de EAD, treinamento corporativo e portais do cliente",
+          "Integração de APIs, ERPs, gateways de pagamento e automações",
+          "Dashboards de BI (Business Intelligence) e relatórios analíticos"
+        ],
+        "target_audience": "Corporações, startups, redes de ensino, franqueadoras e empresas que necessitam de soluções tecnológicas exclusivas.",
+        "keywords": ["desenvolvimento", "software", "app", "aplicativo", "web", "programacao", "api", "sistema sob medida", "ead", "plataforma", "bi", "dashboard", "fabrica de software"]
+      },
+      {
+        "id": "digmidia",
+        "order": 4,
+        "name": "DIGMIDIA",
+        "tagline": "Mídia digital indoor, sinalização dinâmica e encartes digitais",
+        "description": "Pioneira em mídia digital no ponto de venda e comunicação corporativa visual. Transforma a experiência dos clientes no PDV através de redes de TV indoor, totens digitais interativos, encartes digitais dinâmicos e menu boards.",
+        "features": [
+          "Rede de TV Indoor corporativa e promocional no ponto de venda",
+          "Totens Digitais Interativos para atendimento, senhas e catálogo de produtos",
+          "Encartes Digitais animados para WhatsApp, redes sociais e displays",
+          "Menu Boards Dinâmicos para restaurantes, lanchonetes e padarias",
+          "Gerenciamento de conteúdo 100% remoto via nuvem em tempo real"
+        ],
+        "target_audience": "Supermercados, redes de varejo, restaurantes, clínicas, academias, shoppings e escritórios corporativos.",
+        "keywords": ["digmidia", "midia digital", "tv indoor", "toten", "totens", "encartes", "sinalizacao", "displays", "menu board", "encarte digital", "sinalizacao digital", "pdv digital"]
+      },
+      {
+        "id": "contabilidade",
+        "order": 5,
+        "name": "Contabilidade",
+        "tagline": "Gestão contábil estratégica, inteligência tributária e finanças",
+        "description": "Consultoria e assessoria contábil moderna que vai além do básico. Oferece inteligência tributária para redução legal da carga de impostos, escrituração contábil e fiscal precisa, BPO financeiro e gestão completa de folha de pagamento.",
+        "features": [
+          "Planejamento Tributário Estratégico e Recuperação de Créditos fiscais",
+          "Escrituração Contábil, Fiscal e Emissão de Balanços Gerenciais",
+          "BPO Financeiro (Terceirização completa das rotinas de contas a pagar/receber)",
+          "Gestão Trabalhista, Folha de Pagamento e eSocial corporativo",
+          "Abertura, alteração de contrato social e blindagem patrimonial"
+        ],
+        "target_audience": "Empresas do Simples Nacional, Lucro Presumido e Lucro Real que buscam segurança jurídica e economia em impostos.",
+        "keywords": ["contabilidade", "contabil", "imposto", "tributario", "fiscal", "folha", "bpo", "auditoria", "abrir empresa", "simples nacional", "lucro presumido", "lucro real", "balanco", "impostos"]
+      }
+    ],
+    "intents": [
+      {
+        "intent": "empresas_lista",
+        "triggers": ["empresas", "🏢 empresas", "quais sao as empresas", "empresas do grupo", "quais empresas", "quais sao os negocios", "lista de empresas", "quais sao os serviços", "ver empresas", "todas as empresas"],
+        "responses": [
+          "O Grupo BRM reúne 5 empresas especializadas e integradas:\n\n1. 💻 **Sistemas** (PDV, frente de caixa e automação para comércio)\n2. 📢 **M.O Publicidade** (Marketing 360°, tráfego e branding)\n3. ⚙️ **Desenvolvimento** (Apps móveis e softwares sob medida)\n4. 📺 **DIGMIDIA** (TV indoor, encartes digitais e sinalização)\n5. 📊 **Contabilidade** (Planejamento tributário e gestão fiscal)\n\nSobre qual das empresas gostaria de saber mais?"
+        ]
+      },
+      {
+        "intent": "contato_localizacao",
+        "triggers": ["contato", "telefone", "whatsapp", "email", "endereco", "onde fica", "localizacao", "cidade", "estado", "atendem minha regiao"],
+        "responses": [
+          "📍 **Endereço**: Av. Paulista, 1000 - São Paulo, SP\n📞 **Telefone / WhatsApp**: (11) 99999-9999\n✉️ **E-mail**: contato@grupobrm.com.br\n🌐 **Atendimento**: Atendemos empresas em **todo o território nacional (Brasil)**!\n\nDeseja conversar com nosso atendimento humano agora?"
+        ]
+      },
+      {
+        "intent": "orcamento_proposta",
+        "triggers": ["orcamento", "preço", "valor", "quanto custa", "contratar", "proposta", "comprar"],
+        "responses": [
+          "Cada projeto no Grupo BRM é dimensionado sob medida para a sua necessidade! Analisamos o porte da sua empresa para oferecer o melhor custo-benefício.\n\nClique no botão abaixo para receber um orçamento rápido com nossos consultores no WhatsApp!"
+        ]
+      },
+      {
+        "intent": "suporte_horario",
+        "triggers": ["suporte", "horario", "funcionamento", "duvida tecnica", "atendimento"],
+        "responses": [
+          "⏰ **Horário de Atendimento**: Segunda a Sexta, das 08h às 18h.\n🤖 **Autoatendimento Chatbot**: Disponível 24 horas por dia, 7 dias por semana!\n\nSe você já é cliente e precisa de suporte técnico, pode falar diretamente com nossa equipe no WhatsApp."
+        ]
+      },
+      {
+        "intent": "grupobrm_sobre",
+        "triggers": ["grupo brm", "o que e o grupo brm", "sobre o grupo", "quem somos", "historia"],
+        "responses": [
+          "O **Grupo BRM** é um ecossistema integrado que une tecnologia, publicidade, software, mídia digital e contabilidade sob uma mesma visão de inteligência e performance.\n\nNosso lema oficial é:\n🌟 **CONEXÃO QUE GERA VALOR. SOLUÇÕES QUE TRANSFORMAM.**"
+        ]
+      }
+    ],
+    "greetings": [
+      "Olá! Seja muito bem-vindo(a) ao Autoatendimento 24h do **Grupo BRM**! 👋 Como posso ajudar seu negócio hoje?",
+      "Olá! Que excelente ter você por aqui. Sou o assistente virtual do **Grupo BRM**. Sobre qual das nossas 5 empresas você gostaria de informações?"
+    ],
+    "fallbacks": [
+      "Entendi sua dúvida! Para responder com exatidão sobre esse assunto específico, recomendo conversar diretamente com nossa equipe no WhatsApp.",
+      "Para obter uma resposta detalhada e personalizada para o seu modelo de negócio, posso te conectar agora com um consultor especialista no WhatsApp!"
+    ]
+  };
+
+  let knowledgeData = DEFAULT_KNOWLEDGE;
   let chatWindowOpen = false;
 
   // 1. Create HTML Structure for Floating Button & Chat Modal
   function createChatbotUI() {
+    if (document.getElementById("brm-chatbot-container")) return;
+
     const container = document.createElement("div");
     container.id = "brm-chatbot-container";
     container.innerHTML = `
@@ -82,13 +225,15 @@
     document.body.appendChild(container);
   }
 
-  // 2. Fetch Knowledge Base JSON
+  // 2. Fetch Knowledge Base JSON (with fallback)
   async function loadKnowledge() {
     try {
       const response = await fetch("js/chatbot-knowledge.json");
-      knowledgeData = await response.json();
+      if (response.ok) {
+        knowledgeData = await response.json();
+      }
     } catch (e) {
-      console.warn("Nao foi possivel carregar o arquivo JSON do chatbot diretamente, usando backup interno.", e);
+      console.log("Usando base de conhecimento incorporada diretamente no JS.", e);
     }
   }
 
@@ -130,6 +275,7 @@
   }
 
   function normalizeStr(str) {
+    if (!str) return "";
     return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
   }
 
@@ -203,7 +349,6 @@
     const modal = document.getElementById("brm-chat-modal");
     const form = document.getElementById("brm-chat-form");
     const input = document.getElementById("brm-chat-input");
-    const chips = document.querySelectorAll(".chip-btn");
 
     function toggleChat(open) {
       chatWindowOpen = open;
@@ -216,7 +361,7 @@
         
         // Add initial greeting if empty
         const msgContainer = document.getElementById("brm-chat-messages");
-        if (msgContainer.children.length === 0 && knowledgeData) {
+        if (msgContainer && msgContainer.children.length === 0 && knowledgeData) {
           addMessage(knowledgeData.greetings[0], "bot");
         }
       } else {
@@ -228,28 +373,32 @@
       }
     }
 
-    trigger.addEventListener("click", () => toggleChat(!chatWindowOpen));
-    closeBtn.addEventListener("click", () => toggleChat(false));
+    if (trigger) trigger.addEventListener("click", () => toggleChat(!chatWindowOpen));
+    if (closeBtn) closeBtn.addEventListener("click", () => toggleChat(false));
 
-    chips.forEach(chip => {
-      chip.addEventListener("click", () => {
+    // Dynamic delegation for chip buttons
+    document.addEventListener("click", (e) => {
+      const chip = e.target.closest(".chip-btn");
+      if (chip) {
         const query = chip.getAttribute("data-query");
         if (query) {
           addMessage(query, "user");
-          setTimeout(() => processUserQuery(query), 300);
+          setTimeout(() => processUserQuery(query), 200);
         }
-      });
-    });
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const val = input.value.trim();
-      if (val) {
-        addMessage(val, "user");
-        input.value = "";
-        setTimeout(() => processUserQuery(val), 300);
       }
     });
+
+    if (form) {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const val = input.value.trim();
+        if (val) {
+          addMessage(val, "user");
+          input.value = "";
+          setTimeout(() => processUserQuery(val), 200);
+        }
+      });
+    }
   }
 
   // 6. Global API to open chatbot programmatically from company cards / buttons
@@ -271,14 +420,20 @@
 
     if (query) {
       addMessage(query, "user");
-      setTimeout(() => processUserQuery(query), 300);
+      setTimeout(() => processUserQuery(query), 200);
     }
   };
 
-  // 7. Boot Everything on DOM Ready
-  document.addEventListener("DOMContentLoaded", async () => {
+  // 7. Boot Everything on DOM Ready or Immediate if already loaded
+  function boot() {
     createChatbotUI();
-    await loadKnowledge();
+    loadKnowledge();
     initChatbotEvents();
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })();
