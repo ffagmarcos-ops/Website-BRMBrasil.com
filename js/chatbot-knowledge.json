@@ -94,7 +94,7 @@
   "intents": [
     {
       "intent": "empresas_lista",
-      "triggers": ["quais sao as empresas", "empresas do grupo", "quais empresas", "quais sao os negocios", "lista de empresas", "quais sao os serviços"],
+      "triggers": ["empresas", "🏢 empresas", "quais sao as empresas", "empresas do grupo", "quais empresas", "quais sao os negocios", "lista de empresas", "quais sao os serviços", "ver empresas", "todas as empresas"],
       "responses": [
         "O Grupo BRM reúne 5 empresas especializadas e integradas:\n\n1. 💻 **Sistemas** (PDV, frente de caixa e automação para comércio)\n2. 📢 **M.O Publicidade** (Marketing 360°, tráfego e branding)\n3. ⚙️ **Desenvolvimento** (Apps móveis e softwares sob medida)\n4. 📺 **DIGMIDIA** (TV indoor, encartes digitais e sinalização)\n5. 📊 **Contabilidade** (Planejamento tributário e gestão fiscal)\n\nSobre qual das empresas gostaria de saber mais?"
       ]

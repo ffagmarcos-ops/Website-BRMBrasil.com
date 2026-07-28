@@ -129,39 +129,23 @@
     msgContainer.scrollTop = msgContainer.scrollHeight;
   }
 
+  function normalizeStr(str) {
+    return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  }
+
   // 4. Intelligent Natural Language Processing Engine
   function processUserQuery(query) {
-    const cleanQuery = query.toLowerCase().trim();
+    const cleanQuery = normalizeStr(query);
 
     if (!knowledgeData) {
       addMessage("Desculpe, estou carregando minha base de conhecimento. Tente novamente em um instante!", "bot");
       return;
     }
 
-    // A. Check Companies
-    for (const company of knowledgeData.companies) {
-      for (const kw of company.keywords) {
-        if (cleanQuery.includes(kw)) {
-          let responseText = `🏢 **Empresa ${company.order}ª do Grupo: ${company.name.toUpperCase()}**\n\n_${company.tagline}_\n\n${company.description}\n\n**✨ Principais Recursos e Diferenciais:**\n`;
-          if (company.features && company.features.length) {
-            company.features.forEach(f => {
-              responseText += `• ${f}\n`;
-            });
-          }
-          if (company.target_audience) {
-            responseText += `\n🎯 **Público Indicado:** ${company.target_audience}\n`;
-          }
-          responseText += `\nGostaria de solicitar uma proposta ou tirar dúvidas sobre **${company.name}**?`;
-          addMessage(responseText, "bot", true);
-          return;
-        }
-      }
-    }
-
-    // B. Check Intent Triggers
+    // A. Check General Intent Triggers FIRST (e.g., "empresas", "contato", "orçamento")
     for (const intentObj of knowledgeData.intents) {
       for (const trigger of intentObj.triggers) {
-        if (cleanQuery.includes(trigger)) {
+        if (cleanQuery.includes(normalizeStr(trigger))) {
           const randomResp = intentObj.responses[Math.floor(Math.random() * intentObj.responses.length)];
           addMessage(randomResp, "bot", true);
           return;
@@ -169,8 +153,39 @@
       }
     }
 
+    // B. Check Specific Companies by Name, ID or Keywords
+    for (const company of knowledgeData.companies) {
+      const matchName = normalizeStr(company.name);
+      const matchId = normalizeStr(company.id);
+      
+      let isMatch = cleanQuery.includes(matchName) || cleanQuery.includes(matchId);
+      if (!isMatch && company.keywords) {
+        for (const kw of company.keywords) {
+          if (cleanQuery.includes(normalizeStr(kw))) {
+            isMatch = true;
+            break;
+          }
+        }
+      }
+
+      if (isMatch) {
+        let responseText = `🏢 **Empresa ${company.order}ª do Grupo: ${company.name.toUpperCase()}**\n\n_${company.tagline}_\n\n${company.description}\n\n**✨ Principais Recursos e Diferenciais:**\n`;
+        if (company.features && company.features.length) {
+          company.features.forEach(f => {
+            responseText += `• ${f}\n`;
+          });
+        }
+        if (company.target_audience) {
+          responseText += `\n🎯 **Público Indicado:** ${company.target_audience}\n`;
+        }
+        responseText += `\nGostaria de solicitar uma proposta ou tirar dúvidas sobre **${company.name}**?`;
+        addMessage(responseText, "bot", true);
+        return;
+      }
+    }
+
     // C. Greetings check
-    if (cleanQuery.match(/^(ola|olá|oi|bom dia|boa tarde|boa noite|inicio|menu|ajuda)$/)) {
+    if (cleanQuery.match(/^(ola|oi|bom dia|boa tarde|boa noite|inicio|menu|ajuda)$/)) {
       const greeting = knowledgeData.greetings[Math.floor(Math.random() * knowledgeData.greetings.length)];
       addMessage(greeting, "bot");
       return;
