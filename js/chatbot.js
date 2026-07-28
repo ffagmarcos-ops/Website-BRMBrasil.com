@@ -237,7 +237,30 @@
     });
   }
 
-  // 6. Boot Everything on DOM Ready
+  // 6. Global API to open chatbot programmatically from company cards / buttons
+  window.openBRMChatbot = function(query) {
+    const modal = document.getElementById("brm-chat-modal");
+    if (!modal) return;
+    
+    modal.classList.remove("hidden");
+    setTimeout(() => {
+      modal.classList.remove("scale-95", "opacity-0");
+      modal.classList.add("scale-100", "opacity-100");
+    }, 10);
+    chatWindowOpen = true;
+
+    const msgContainer = document.getElementById("brm-chat-messages");
+    if (msgContainer && msgContainer.children.length === 0 && knowledgeData) {
+      addMessage(knowledgeData.greetings[0], "bot");
+    }
+
+    if (query) {
+      addMessage(query, "user");
+      setTimeout(() => processUserQuery(query), 300);
+    }
+  };
+
+  // 7. Boot Everything on DOM Ready
   document.addEventListener("DOMContentLoaded", async () => {
     createChatbotUI();
     await loadKnowledge();
