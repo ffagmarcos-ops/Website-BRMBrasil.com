@@ -11,17 +11,7 @@ const formSchema = z.object({
   email: z.string().email("Informe um e-mail válido."),
   phone: z.string().min(8, "Informe um telefone ou WhatsApp válido."),
   company: z.string().optional(),
-  interestArea: z.enum([
-    "contabilidade",
-    "mo-publicidade",
-    "desenvolvimento",
-    "digmidia",
-    "sistemas-supermercados",
-    "solucoes-integradas",
-    "outros",
-  ], {
-    errorMap: () => ({ message: "Selecione uma área de interesse." }),
-  }),
+  interestArea: z.string().optional(),
   message: z.string().min(5, "Escreva uma breve mensagem."),
 });
 
@@ -132,31 +122,14 @@ export const ContactForm: React.FC<{ compact?: boolean }> = ({ compact = false }
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div>
-              <select
-                {...register("interestArea")}
-                className="w-full px-4 py-2.5 rounded-xl bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-blue-400"
-              >
-                <option value="solucoes-integradas">Soluções integradas</option>
-                <option value="contabilidade">Contabilidade</option>
-                <option value="mo-publicidade">M.O Publicidade</option>
-                <option value="desenvolvimento">Desenvolvimento</option>
-                <option value="digmidia">DIGMIDIA</option>
-                <option value="sistemas-supermercados">Sistemas para supermercados</option>
-                <option value="outros">Outros</option>
-              </select>
-            </div>
-
-            <div>
-              <input
-                {...register("message")}
-                type="text"
-                placeholder="Sua mensagem*"
-                className="w-full px-4 py-2.5 rounded-xl bg-white text-gray-900 placeholder-gray-400 text-xs focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-              {errors.message && <span className="text-[10px] text-red-300 mt-1 block">{errors.message.message}</span>}
-            </div>
+          <div>
+            <input
+              {...register("message")}
+              type="text"
+              placeholder="Sua mensagem*"
+              className="w-full px-4 py-2.5 rounded-xl bg-white text-gray-900 placeholder-gray-400 text-xs focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+            {errors.message && <span className="text-[10px] text-red-300 mt-1 block">{errors.message.message}</span>}
           </div>
 
           <button
@@ -224,21 +197,7 @@ export const ContactForm: React.FC<{ compact?: boolean }> = ({ compact = false }
             </div>
           </div>
 
-          <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1">Área de Interesse*</label>
-            <select
-              {...register("interestArea")}
-              className="w-full px-4 py-3 rounded-xl border border-brm-border text-sm focus:outline-none focus:ring-2 focus:ring-[#0754A6]"
-            >
-              <option value="solucoes-integradas">Soluções integradas Grupo BRM</option>
-              <option value="contabilidade">Contabilidade</option>
-              <option value="mo-publicidade">M.O Publicidade</option>
-              <option value="desenvolvimento">Desenvolvimento de software</option>
-              <option value="digmidia">DIGMIDIA (TV indoor, encartes digitais)</option>
-              <option value="sistemas-supermercados">Sistemas para supermercados</option>
-              <option value="outros">Outros assuntos</option>
-            </select>
-          </div>
+
 
           <div>
             <label className="block text-xs font-semibold text-gray-700 mb-1">Mensagem*</label>
