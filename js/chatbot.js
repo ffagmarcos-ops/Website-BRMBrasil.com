@@ -1,145 +1,191 @@
 /* ==========================================================================
-   GRUPO BRM - CHATBOT INTERATIVO DE AUTOATENDIMENTO 24H (ASSISTENTE VIRTUAL)
+   GRUPO BRM - CHATBOT INTERATIVO DE AUTOATENDIMENTO (ATENDENTE VIRTUAL HUMANO)
    ========================================================================== */
 
 (function () {
-  // Base de Conhecimento Incorporada no Script (Alinhada 100% com o texto oficial do site)
+  // Base de Conhecimento com Tom de Conversa Humano e Variações Fluídas
   const DEFAULT_KNOWLEDGE = {
     "group_info": {
       "name": "Grupo BRM",
-      "slogan": "CONEXÃO QUE GERA VALOR. SOLUÇÕES QUE TRANSFORMAM.",
+      "slogan": "Conexão que gera valor. Soluções que transformam.",
       "description": "O Grupo BRM é um ecossistema empresarial focado em conectar negócios, tecnologia, gestão, comunicação e inteligência para impulsionar resultados sustentáveis em empresas de todos os portes.",
-      "tagline": "Soluções integradas para impulsionar empresas e negócios.",
-      "coverage": "Atendimento em todo o território nacional.",
+      "coverage": "Atendemos empresas em todo o território nacional (São Paulo e todo o Brasil).",
       "address": "Av. Paulista, 1000 - São Paulo, SP",
       "phone": "(11) 99999-9999",
       "email": "contato@grupobrm.com.br"
     },
-    "companies": [
-      {
-        "id": "sistemas",
+    "greetings": [
+      "Olá! Seja muito bem-vindo(a) ao Grupo BRM! 👋 Sou o assistente virtual da empresa. Como posso te ajudar hoje?",
+      "Oi! Que ótimo ter você por aqui! 😊 Sou o atendente virtual do Grupo BRM. Sobre qual assunto ou empresa você gostaria de conversar?"
+    ],
+    "hooks": [
+      "Excelente pergunta! ",
+      "Entendi perfeitamente o seu ponto. ",
+      "Com certeza! Essa é uma dúvida muito importante. ",
+      "Ótima colocação! ",
+      "Perfeito! Vou te explicar exatamente como funciona. "
+    ],
+    "companies": {
+      "sistemas": {
         "order": 1,
         "name": "Sistemas",
         "tagline": "Sistemas comerciais para alta performance e frente de caixa",
-        "description": "Soluções de gestão, PDV de alta disponibilidade, controle de estoque, frente de caixa e suporte especializado para empresas e supermercados.",
-        "details": [
-          "Frente de caixa (PDV) ultra-rápido com contingência offline",
-          "Controle de estoque avançado, gestão de lotes e inventário",
-          "Emissão fiscal simplificada (NF-e, NFC-e, SAT, Sped Fiscal)",
-          "Integração com balanças, etiquetadoras e PinPads (TEF)",
-          "Relatórios gerenciais e conciliação bancária automática"
-        ],
-        "audience": "Supermercados, minimercados, hortifrutis, atacadistas, lojas de conveniência e comércio varejista.",
-        "keywords": ["sistemas", "sistema", "pdv", "supermercado", "supermercados", "estoque", "caixa", "frente de caixa", "vendas", "nfe", "nfce", "tef", "balanca", "inventario", "comercio", "varejo"]
+        "summary": "A **Sistemas** é a nossa unidade especializada em automação comercial e gestão de varejo. Nosso foco é garantir que seu caixa nunca pare e seu estoque fique 100% sob controle.",
+        "variations": [
+          "A **Sistemas** cuida de toda a operação do seu comércio. Oferecemos um PDV ultra-rápido que não trava e continua vendendo mesmo se a internet cair (contingência offline), além de controle de estoque com validade/lotes, emissão de nota fiscal (NFC-e, NF-e, SAT) e integração com balanças e TEF.",
+          "Se você busca agilidade no caixa e controle total da sua loja ou supermercado, a **Sistemas** é a solução ideal! Nosso software gerencia desde a entrada de mercadorias e inventário até a venda no caixa e emissão das notas fiscais sem complicação."
+        ]
       },
-      {
-        "id": "mo-publicidade",
+      "mo-publicidade": {
         "order": 2,
         "name": "M.O Publicidade",
         "tagline": "Estratégia de marca, marketing e posicionamento",
-        "description": "Marketing, redes sociais, campanhas publicitárias, tráfego pago e comunicação que geram visibilidade, fortalecimento de marca e resultados reais.",
-        "details": [
-          "Branding, criação de logotipo e identidade visual completa",
-          "Gestão de tráfego pago (Google Ads, Meta Ads e TikTok Ads)",
-          "Gestão de mídias sociais, criação de conteúdo e vídeos",
-          "Campanhas publicitárias integradas On-line e Off-line",
-          "Produção de materiais impressos, promocionais e catálogos"
-        ],
-        "audience": "Empresas que desejam aumentar suas vendas e fortalecer o posicionamento de marca.",
-        "keywords": ["mo", "publicidade", "marketing", "propaganda", "branding", "redes sociais", "anuncios", "campanhas", "google ads", "instagram", "facebook", "identidade visual", "logo", "agencia", "trafego pago"]
+        "summary": "A **M.O Publicidade** é a nossa agência de comunicação e marketing 360°. Nosso objetivo é fazer sua marca vender mais e dominar o mercado.",
+        "variations": [
+          "A **M.O Publicidade** transforma a imagem da sua empresa! Cuidamos da criação de logotipos e identidade visual, anúncios no Google Ads, Instagram e Facebook, gestão de redes sociais com conteúdo em vídeo e campanhas completas de vendas.",
+          "Com a **M.O Publicidade**, sua empresa ganha visibilidade real. Desenvolvemos estratégias de tráfego pago para atrair clientes diariamente, além de cuidar das mídias sociais e materiais gráficos/promocionais para o seu negócio."
+        ]
       },
-      {
-        "id": "desenvolvimento",
+      "desenvolvimento": {
         "order": 3,
         "name": "Desenvolvimento",
         "tagline": "Engenharia de software e aplicativos sob medida",
-        "description": "Soluções personalizadas, sistemas web, aplicativos móveis e automação de processos que otimizam rotinas e impulsionam negócios.",
-        "details": [
-          "Desenvolvimento de aplicativos móveis (iOS e Android)",
-          "Plataformas e softwares web sob medida em nuvem",
-          "Sistemas de EAD e portais corporativos do cliente",
-          "Integração de APIs, ERPs e automação de processos",
-          "Dashboards de BI e soluções com Inteligência Artificial"
-        ],
-        "audience": "Corporações, startups, redes de ensino, franqueadoras e empresas com processos exclusivos.",
-        "keywords": ["desenvolvimento", "software", "app", "aplicativo", "web", "programacao", "api", "sistema sob medida", "ead", "plataforma", "bi", "dashboard", "fabrica de software"]
+        "summary": "A **Desenvolvimento** é a nossa fábrica de software. Construímos soluções tecnológicas exclusivas pensadas para o seu modelo de negócio.",
+        "variations": [
+          "Na **Desenvolvimento**, criamos aplicativos móveis para iOS e Android, sistemas web corporativos em nuvem, portais de clientes, plataformas de EAD e automação de processos para eliminar tarefas manuais.",
+          "Se sua empresa precisa de um aplicativo exclusivo ou de um sistema sob medida com dashboards de BI e Inteligência Artificial, a **Desenvolvimento** planeja e constrói tudo com máxima segurança e escalabilidade."
+        ]
       },
-      {
-        "id": "digmidia",
+      "digmidia": {
         "order": 4,
         "name": "DIGMIDIA",
         "tagline": "Mídia digital indoor, sinalização e encartes interativos",
-        "description": "Sistemas voltados para a gestão digital, presença online, TV indoor corporativa, totens interativos e encartes digitais dinâmicos para o ponto de venda.",
-        "details": [
-          "Rede de TV Indoor corporativa e promocional no PDV",
-          "Totens digitais interativos para atendimento e catálogo de produtos",
-          "Encartes digitais dinâmicos para WhatsApp e mídias sociais",
-          "Menu boards dinâmicos para restaurantes e lanchonetes",
-          "Gerenciamento remoto de conteúdo 100% via nuvem em tempo real"
-        ],
-        "audience": "Supermercados, redes de varejo, restaurantes, clínicas, academias e shopping centers.",
-        "keywords": ["digmidia", "midia digital", "tv indoor", "toten", "totens", "encartes", "sinalizacao", "displays", "menu board", "encarte digital", "sinalizacao digital"]
+        "summary": "A **DIGMIDIA** revoluciona a comunicação visual no ponto de venda com telas digitais, TV indoor e encartes interativos.",
+        "variations": [
+          "A **DIGMIDIA** leva tecnologia visual para sua loja ou escritório! Implementamos redes de TV Indoor com ofertas dinâmicas, totens digitais interativos para atendimento, encartes digitais animados para WhatsApp e cardápios digitais.",
+          "Com a **DIGMIDIA**, você atualiza todo o conteúdo promocional das suas telas em tempo real via nuvem. É perfeito para supermercados, lojas, restaurantes e recepções corporativas que querem se destacar."
+        ]
       },
-      {
-        "id": "contabilidade",
+      "contabilidade": {
         "order": 5,
         "name": "Contabilidade",
         "tagline": "Gestão contábil, inteligência tributária e finanças",
-        "description": "Gestão financeira, fiscal e contábil completa para empresas de todos os portes, com foco em planejamento tributário inteligente e segurança jurídica.",
-        "details": [
-          "Planejamento tributário estratégico e recuperação de créditos fiscais",
-          "Escrituração contábil, fiscal e balanços gerenciais",
-          "BPO financeiro (terceirização das rotinas financeiras)",
-          "Gestão trabalhista, folha de pagamento e eSocial",
-          "Abertura, alteração contratual e regularização jurídica"
-        ],
-        "audience": "Empresas do Simples Nacional, Lucro Presumido e Lucro Real.",
-        "keywords": ["contabilidade", "contabil", "imposto", "tributario", "fiscal", "folha", "bpo", "auditoria", "abrir empresa", "simples nacional", "lucro presumido", "lucro real", "balanco", "impostos"]
+        "summary": "A **Contabilidade** do Grupo BRM entrega inteligência fiscal e financeira para sua empresa pagar menos impostos dentro da lei.",
+        "variations": [
+          "A **Contabilidade** vai muito além de emitir guias! Realizamos planejamento tributário estratégico para reduzir a carga de impostos da sua empresa, BPO financeiro (terceirização do contas a pagar/receber) e folha de pagamento eSocial.",
+          "Nossa equipe contábil cuida da escrituração fiscal, balanços, recuperação de créditos tributários e regularização jurídica, garantindo 100% de segurança fiscal para empresas do Simples Nacional, Lucro Presumido e Lucro Real."
+        ]
       }
-    ],
-    "intents": [
+    },
+    "qa_topics": [
       {
         "intent": "empresas_lista",
-        "triggers": ["empresas", "🏢 empresas", "quais sao as empresas", "empresas do grupo", "quais empresas", "quais sao os negocios", "lista de empresas", "quais sao os serviços", "ver empresas", "todas as empresas"],
-        "responses": [
-          "O **Grupo BRM** é composto por 5 empresas especializadas na seguinte ordem:\n\n1. 💻 **Sistemas**: Sistemas comerciais para alta performance, PDV e frente de caixa.\n2. 📢 **M.O Publicidade**: Estratégia de marca, marketing de performance e publicidade.\n3. ⚙️ **Desenvolvimento**: Engenharia de software e aplicativos móveis sob medida.\n4. 📺 **DIGMIDIA**: Mídia digital indoor, TV corporativa e encartes interativos.\n5. 📊 **Contabilidade**: Gestão contábil, inteligência tributária e finanças.\n\nSobre qual empresa você deseja mais detalhes?"
+        "triggers": ["empresas", "quais sao as empresas", "lista de empresas", "quais empresas", "quais negocios", "ver empresas"],
+        "answers": [
+          "O **Grupo BRM** conta com 5 empresas altamente integradas na seguinte ordem:\n\n1. 💻 **Sistemas** (PDV, frente de caixa e gestão de varejo/supermercados)\n2. 📢 **M.O Publicidade** (Marketing 360°, tráfego pago e branding)\n3. ⚙️ **Desenvolvimento** (Apps sob medida iOS/Android e sistemas web)\n4. 📺 **DIGMIDIA** (TV indoor, encartes digitais e totens interativos)\n5. 📊 **Contabilidade** (Planejamento tributário, BPO financeiro e gestão fiscal)\n\nQual dessas áreas é a prioridade no seu negócio hoje?",
+          "Nosso ecossistema reúne 5 soluções completas:\n\n1. 💻 **Sistemas**\n2. 📢 **M.O Publicidade**\n3. ⚙️ **Desenvolvimento**\n4. 📺 **DIGMIDIA**\n5. 📊 **Contabilidade**\n\nSobre qual delas você quer bater um papo agora?"
         ]
       },
       {
-        "intent": "cases_resultados",
-        "triggers": ["cases", "resultados", "clientes", "exemplos", "historias de sucesso"],
-        "responses": [
-          "Principais cases de sucesso do Grupo BRM:\n\n• **Rede Mais** (Marketing & M.O Publicidade): +18% na eficiência operacional com tráfego pago e redesign.\n• **EcoVarejo** (Contabilidade): Redução de 12% nos custos operacionais com reestruturação fiscal.\n• **SuperFácil** (Desenvolvimento): +25% na eficiência da operação diária com plataforma web sob medida.\n• **UniPeças** (DIGMIDIA & Sistemas): Comunicação unificada e vantagem competitiva no mercado com TV Indoor."
+        "intent": "pdv_offline_duvida",
+        "triggers": ["internet cair", "sem internet", "pdv trava", "pdv offline", "contingencia", "caixa parar"],
+        "answers": [
+          "Essa é uma preocupação super legítima! Nosso **PDV (Frente de Caixa)** possui tecnologia de contingência offline. Ou seja: se a internet da sua loja cair, o caixa continua vendendo e emitindo comprovantes normalmente sem travar. Quando a internet voltar, tudo se sincroniza automaticamente!",
+          "Fique tranquilo(a)! O sistema da **Sistemas** foi feito pensando no dia a dia real do varejo. Caso falhe a conexão, o PDV opera offline perfeitamente para que você nunca perca uma venda ou enfrente filas."
         ]
       },
       {
-        "intent": "diferenciais",
-        "triggers": ["por que escolher", "diferenciais", "vantagens", "por que o grupo brm"],
-        "responses": [
-          "Por que escolher o **Grupo BRM**:\n\n1. 🔗 **Soluções Integradas**: Tecnologia, comunicação, software e contabilidade trabalhando juntas.\n2. 👥 **Atendimento Especializado**: Equipe capacitada e suporte dedicado.\n3. 🎯 **Foco em Resultados**: Estratégias orientadas para o crescimento real do seu negócio.\n4. ⚡ **Tecnologia e Inovação**: Ferramentas modernas para otimizar sua operação."
+        "intent": "nota_fiscal_duvida",
+        "triggers": ["nota fiscal", "nfc-e", "nf-e", "sat", "sped", "emite nota"],
+        "answers": [
+          "Sim! O sistema emite todos os documentos fiscais exigidos pela legislação de forma 100% automática: **NFC-e, NF-e, SAT, Sped Fiscal e Bloco K**. É rápido e sem burocracia para o seu contador!",
+          "Com certeza! A emissão de notas (NFC-e / NF-e / SAT) é integrada diretamente ao fechamento de cada venda no PDV, gerando os arquivos de homologação fiscal com total segurança."
         ]
       },
       {
-        "intent": "contato_localizacao",
-        "triggers": ["contato", "telefone", "whatsapp", "email", "endereco", "onde fica", "localizacao"],
-        "responses": [
-          "📍 **Endereço**: Av. Paulista, 1000 - São Paulo, SP\n📞 **Telefone / WhatsApp**: (11) 99999-9999\n✉️ **E-mail**: contato@grupobrm.com.br\n🌐 **Atendimento**: Atendemos empresas em todo o território nacional."
+        "intent": "equipamentos_duvida",
+        "triggers": ["balanca", "leitor", "codigo de barras", "pinpad", "tef", "maquininha", "impressora"],
+        "answers": [
+          "Nosso sistema se conecta com os principais equipamentos do mercado! Funciona perfeitamente com balanças de checkout e etiquetadoras (Toledo, Filizola), leitores de código de barras, impressoras térmicas e TEF (máquina de cartão integrada ao caixa).",
+          "Pode ter certeza! Integramos nativamente com balanças comerciais, leitores, leitores de código QR/Barra e sistemas TEF de cartão, garantindo um processo de leitura e pagamento em poucos segundos."
         ]
       },
       {
-        "intent": "grupobrm_sobre",
-        "triggers": ["grupo brm", "o que e o grupo brm", "sobre o grupo", "quem somos"],
-        "responses": [
-          "O **Grupo BRM** oferece soluções integradas para impulsionar empresas e negócios. Tecnologia, estratégia, comunicação e gestão trabalhando juntas para gerar resultados reais e crescimento sustentável.\n\nSlogan Oficial:\n🌟 **CONEXÃO QUE GERA VALOR. SOLUÇÕES QUE TRANSFORMAM.**"
+        "intent": "anuncios_trafego_duvida",
+        "triggers": ["google ads", "instagram ads", "facebook ads", "tiktok ads", "anuncios", "trafego pago", "atrair clientes"],
+        "answers": [
+          "A **M.O Publicidade** cria e gerencia campanhas de tráfego pago focadas em conversão! Investimos estrategicamente no Google Ads para alcançar quem já procura seu serviço e no Instagram/Facebook Ads para gerar desejo e novos clientes.",
+          "Com a **M.O Publicidade**, seus anúncios aparecem para as pessoas certas na sua cidade ou em todo o Brasil. Cuidamos do design, dos textos e da otimização diária das campanhas para trazer o maior retorno sobre seu investimento."
+        ]
+      },
+      {
+        "intent": "criar_logo_duvida",
+        "triggers": ["criar logo", "logotipo", "identidade visual", "manual de marca", "branding"],
+        "answers": [
+          "Desenvolvemos toda a identidade visual da sua marca! A **M.O Publicidade** cria logotipos profissionais, paleta de cores, tipografia e o manual completo de marca para deixar sua empresa com presença marcante e profissional.",
+          "Com certeza! Uma marca forte transmite confiança. Nossa equipe de design cria o logotipo e toda a identidade visual alinhada ao posicionamento do seu negócio."
+        ]
+      },
+      {
+        "intent": "desenvolvimento_app_duvida",
+        "triggers": ["criar app", "criar aplicativo", "app ios android", "quanto custa um aplicativo", "desenvolver app"],
+        "answers": [
+          "Criamos aplicativos móveis nativos e híbridos para iOS e Android! A **Desenvolvimento** cuida de todas as etapas: desde o protótipo de telas (UX/UI), programação do código até a publicação oficial na App Store e Google Play.",
+          "Sensacional! Desenvolver um aplicativo exclusivo é um passo gigante para a empresa. Nossa fábrica de software mapeia sua ideia, cria a arquitetura em nuvem e entrega um aplicativo rápido, seguro e muito fácil de usar."
+        ]
+      },
+      {
+        "intent": "tv_indoor_encarte_duvida",
+        "triggers": ["tv indoor", "totem", "encarte digital", "menu board", "telas na loja", "sinalizacao"],
+        "answers": [
+          "A **DIGMIDIA** transforma a experiência na sua loja física! Instalamos redes de TV Indoor com programação dinâmica de ofertas, totens interativos touchscreen e encartes digitais animados perfeitos para divulgar no WhatsApp.",
+          "Com a **DIGMIDIA**, você atualiza o preço ou a foto de uma promoção em todas as telas da sua loja com poucos cliques de forma remota via nuvem. É moderno e atrai a atenção dos clientes no PDV!"
+        ]
+      },
+      {
+        "intent": "reduzir_impostos_duvida",
+        "triggers": ["reduzir imposto", "pagar menos imposto", "planejamento tributario", "recuperar credito", "sonegar nao", "impostos"],
+        "answers": [
+          "Nossa divisão de **Contabilidade** é especialista em Inteligência Tributária! Efetuamos um estudo completo do seu negócio para enquadrar a empresa no regime fiscal (Simples, Lucro Presumido ou Real) que pague o menor imposto possível dentro da lei.",
+          "Com um bom Planejamento Tributário da **Contabilidade**, muitas empresas descobrem que estavam pagando tributos a mais e conseguem reduzir custos de forma legal e imediata."
+        ]
+      },
+      {
+        "intent": "bpo_financeiro_duvida",
+        "triggers": ["bpo financeiro", "terceirizar financeiro", "contas a pagar", "fluxo de caixa", "contas a receber"],
+        "answers": [
+          "O **BPO Financeiro** da nossa Contabilidade assume a rotina operacional do seu setor financeiro! Cuidamos dos pagamentos, agendamentos, conciliação bancária diária e emissão de relatórios para você focar apenas em fazer o negócio crescer.",
+          "Com o BPO Financeiro, sua empresa ganha um setor financeiro profissional sem precisar contratar e treinar uma equipe interna. Tudo organizado com transparência total!"
+        ]
+      },
+      {
+        "intent": "cases_resultados_duvida",
+        "triggers": ["cases", "resultados", "clientes", "exemplos", "rede mais", "ecovarejo", "superfacil", "unipeças"],
+        "answers": [
+          "Olha alguns dos nossos resultados em clientes reais:\n\n• **Rede Mais**: +18% na eficiência com estratégias de tráfego e branding da M.O Publicidade.\n• **EcoVarejo**: Redução de 12% em custos com reorganização fiscal da Contabilidade.\n• **SuperFácil**: +25% de agilidade na operação com sistema sob medida da Desenvolvimento.\n• **UniPeças**: Vantagem competitiva com TV Indoor da DIGMIDIA.",
+          "Temos orgulho de transformar negócios! Clientes como a **Rede Mais**, **EcoVarejo**, **SuperFácil** e **UniPeças** alcançaram aumentos expressivos de eficiência e redução de custos através das soluções do Grupo BRM."
+        ]
+      },
+      {
+        "intent": "contato_localizacao_duvida",
+        "triggers": ["contato", "telefone", "whatsapp", "email", "endereco", "onde fica", "sao paulo", "atendem meu estado"],
+        "answers": [
+          "Ficamos localizados na **Av. Paulista, 1000 - São Paulo, SP**! 📍 Mas fique tranquilo(a): atendemos clientes e empresas em **todo o território nacional (Brasil inteiro)** via atendimento digital e remoto com total proximidade.",
+          "Nossa sede fica na **Av. Paulista, 1000 (São Paulo, SP)**, e prestamos atendimento especializado para empresas de todos os estados do Brasil! E-mail: contato@grupobrm.com.br / Tel: (11) 99999-9999."
+        ]
+      },
+      {
+        "intent": "orcamento_proposta_duvida",
+        "triggers": ["orcamento", "preço", "quanto custa", "valor", "proposta", "contratar"],
+        "answers": [
+          "Como cada empresa possui uma necessidade única, dimensionamos a proposta sob medida para caber no seu orçamento! Me conte um pouco sobre o que sua empresa precisa que vou te detalhar os próximos passos.",
+          "Elaboramos propostas personalizadas de acordo com o porte da sua empresa. Quer me explicar um pouquinho sobre qual serviço você precisa no momento?"
         ]
       }
     ],
-    "greetings": [
-      "Olá! Seja bem-vindo(a) ao Autoatendimento do **Grupo BRM**! 👋 Como posso ajudar sua empresa hoje?",
-      "Olá! Sou o assistente virtual do **Grupo BRM**. Sobre qual das nossas 5 empresas você gostaria de saber mais?"
-    ],
     "fallbacks": [
-      "Posso detalhar informações sobre **Sistemas**, **M.O Publicidade**, **Desenvolvimento**, **DIGMIDIA** ou **Contabilidade**! Qual empresa você gostaria de consultar?"
+      "Entendi o seu ponto! Posso te responder em detalhes sobre **Sistemas** (PDV/caixa), **M.O Publicidade** (marketing/anúncios), **Desenvolvimento** (apps/softwares), **DIGMIDIA** (telas/TV indoor) ou **Contabilidade** (impostos/gestão). Sobre qual destas áreas você quer falar?",
+      "Olha, para essa dúvida específica, posso te ajudar explicando como nossas soluções em tecnologia, publicidade ou contabilidade se aplicam ao seu negócio. O que você gostaria de analisar?"
     ]
   };
 
@@ -208,7 +254,7 @@
 
         <!-- Input Footer -->
         <form id="brm-chat-form" class="p-3 bg-white border-t border-gray-200 flex items-center space-x-2">
-          <input type="text" id="brm-chat-input" placeholder="Digite sobre o Grupo BRM ou empresas..." autocomplete="off" class="flex-1 px-4 py-2.5 rounded-full bg-gray-100 text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#1E4FA3]">
+          <input type="text" id="brm-chat-input" placeholder="Digite sua dúvida sobre o Grupo BRM ou serviços..." autocomplete="off" class="flex-1 px-4 py-2.5 rounded-full bg-gray-100 text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#1E4FA3]">
           <button type="submit" class="p-2.5 bg-[#19A37F] hover:bg-[#138366] text-white rounded-full transition-colors shadow-md flex items-center justify-center">
             <svg class="w-4 h-4 transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
@@ -262,7 +308,13 @@
     return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
   }
 
-  // 4. Processing Engine (Coerente 100% com o site)
+  // Helper para selecionar variações de respostas aleatórias de forma natural
+  function getRandomItem(arr) {
+    if (!arr || !arr.length) return "";
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  // 4. Engine Humano de Conversação
   function processUserQuery(query) {
     const cleanQuery = normalizeStr(query);
 
@@ -271,25 +323,31 @@
       return;
     }
 
-    // A. Check General Intent Triggers FIRST
-    for (const intentObj of knowledgeData.intents) {
-      for (const trigger of intentObj.triggers) {
-        if (cleanQuery.includes(normalizeStr(trigger))) {
-          const randomResp = intentObj.responses[Math.floor(Math.random() * intentObj.responses.length)];
-          addMessage(randomResp, "bot");
-          return;
+    // A. Check Q&A Topics (Perguntas Específicas Frequentes)
+    if (knowledgeData.qa_topics) {
+      for (const topic of knowledgeData.qa_topics) {
+        for (const trigger of topic.triggers) {
+          if (cleanQuery.includes(normalizeStr(trigger))) {
+            const answer = getRandomItem(topic.answers);
+            addMessage(answer, "bot");
+            return;
+          }
         }
       }
     }
 
-    // B. Check Specific Companies by ID, Name or Keywords
-    for (const company of knowledgeData.companies) {
-      const matchName = normalizeStr(company.name);
-      const matchId = normalizeStr(company.id);
-      
-      let isMatch = cleanQuery.includes(matchName) || cleanQuery.includes(matchId);
-      if (!isMatch && company.keywords) {
-        for (const kw of company.keywords) {
+    // B. Check Specific Companies (Empresas do Grupo)
+    const companyKeys = ["sistemas", "mo-publicidade", "desenvolvimento", "digmidia", "contabilidade"];
+    for (const key of companyKeys) {
+      const comp = knowledgeData.companies ? knowledgeData.companies[key] : null;
+      if (!comp) continue;
+
+      const normName = normalizeStr(comp.name);
+      const normKey = normalizeStr(key);
+
+      let isMatch = cleanQuery.includes(normName) || cleanQuery.includes(normKey);
+      if (!isMatch && comp.keywords) {
+        for (const kw of comp.keywords) {
           if (cleanQuery.includes(normalizeStr(kw))) {
             isMatch = true;
             break;
@@ -298,29 +356,36 @@
       }
 
       if (isMatch) {
-        let responseText = `🏢 **Empresa ${company.order}ª do Grupo: ${company.name.toUpperCase()}**\n\n_${company.tagline}_\n\n${company.description}\n\n**Soluções e Serviços:**\n`;
-        if (company.details && company.details.length) {
-          company.details.forEach(d => {
-            responseText += `• ${d}\n`;
-          });
-        }
-        if (company.audience) {
-          responseText += `\n🎯 **Público Indicado:** ${company.audience}`;
-        }
+        const hook = getRandomItem(knowledgeData.hooks || [""]);
+        const textVar = getRandomItem(comp.variations || [comp.summary]);
+        const responseText = `${hook}🏢 **Empresa ${comp.order}ª do Grupo: ${comp.name.toUpperCase()}**\n\n_${comp.tagline}_\n\n${textVar}`;
         addMessage(responseText, "bot");
         return;
       }
     }
 
-    // C. Greetings check
+    // C. Check General Intents (Intenções Gerais)
+    if (knowledgeData.intents) {
+      for (const intentObj of knowledgeData.intents) {
+        for (const trigger of intentObj.triggers) {
+          if (cleanQuery.includes(normalizeStr(trigger))) {
+            const answer = getRandomItem(intentObj.responses);
+            addMessage(answer, "bot");
+            return;
+          }
+        }
+      }
+    }
+
+    // D. Greetings Check
     if (cleanQuery.match(/^(ola|oi|bom dia|boa tarde|boa noite|inicio|menu|ajuda)$/)) {
-      const greeting = knowledgeData.greetings[Math.floor(Math.random() * knowledgeData.greetings.length)];
+      const greeting = getRandomItem(knowledgeData.greetings);
       addMessage(greeting, "bot");
       return;
     }
 
-    // D. Fallback Response
-    const fallback = knowledgeData.fallbacks[Math.floor(Math.random() * knowledgeData.fallbacks.length)];
+    // E. Fallback Humano
+    const fallback = getRandomItem(knowledgeData.fallbacks);
     addMessage(fallback, "bot");
   }
 
@@ -343,7 +408,7 @@
         
         const msgContainer = document.getElementById("brm-chat-messages");
         if (msgContainer && msgContainer.children.length === 0 && knowledgeData) {
-          addMessage(knowledgeData.greetings[0], "bot");
+          addMessage(getRandomItem(knowledgeData.greetings), "bot");
         }
       } else {
         modal.classList.remove("scale-100", "opacity-100");
@@ -395,7 +460,7 @@
 
     const msgContainer = document.getElementById("brm-chat-messages");
     if (msgContainer && msgContainer.children.length === 0 && knowledgeData) {
-      addMessage(knowledgeData.greetings[0], "bot");
+      addMessage(getRandomItem(knowledgeData.greetings), "bot");
     }
 
     if (query) {
@@ -404,7 +469,7 @@
     }
   };
 
-  // 7. Boot Everything on DOM Ready or Immediate
+  // 7. Boot Everything on DOM Ready
   function boot() {
     createChatbotUI();
     loadKnowledge();
