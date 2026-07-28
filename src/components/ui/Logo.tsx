@@ -12,10 +12,10 @@ interface LogoProps {
 export const Logo: React.FC<LogoProps> = ({
   variant = "default",
   className = "",
-  width = 220,
-  height = 52,
+  width = 280,
+  height = 80,
 }) => {
-  const logoPath = variant === "light" ? "/images/logo-brm-light.svg" : "/images/logo-brm.svg";
+  const logoPath = variant === "light" ? "/images/logo-brm-light.png" : "/images/logo-brm.png";
 
   return (
     <Link href="/" className={`inline-flex items-center group transition-opacity hover:opacity-95 ${className}`}>
@@ -24,7 +24,7 @@ export const Logo: React.FC<LogoProps> = ({
         alt="Grupo BRM - Soluções Integradas"
         width={width}
         height={height}
-        className="h-auto w-auto max-h-[48px] md:max-h-[56px] object-contain"
+        className="h-auto w-auto max-h-[72px] md:max-h-[96px] object-contain"
         priority
       />
     </Link>
