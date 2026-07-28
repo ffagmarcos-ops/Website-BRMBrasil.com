@@ -1,19 +1,19 @@
 /* ==========================================================================
-   GRUPO BRM - CHATBOT INTERATIVO DE AUTOATENDIMENTO 24H (WHATSAPP FLUTUANTE)
+   GRUPO BRM - CHATBOT INTERATIVO DE AUTOATENDIMENTO 24H (ASSISTENTE VIRTUAL)
    ========================================================================== */
 
 (function () {
-  // Built-in Knowledge Base Fallback (Guarantees instant local file:// execution & zero CORS issues)
+  // Base de Conhecimento Incorporada no Script (Garante funcionamento 100% instantâneo via file:// e servidor)
   const DEFAULT_KNOWLEDGE = {
     "group_info": {
       "name": "Grupo BRM",
-      "slogan": "Conexão que gera valor. Soluções que transformam.",
+      "slogan": "CONEXÃO QUE GERA VALOR. SOLUÇÕES QUE TRANSFORMAM.",
       "description": "O Grupo BRM é um ecossistema empresarial focado em conectar negócios, tecnologia, gestão, comunicação e inteligência para impulsionar resultados sustentáveis em empresas de todos os portes.",
-      "coverage": "Atendimento nacional em todo o Brasil",
+      "coverage": "Atendimento nacional em todo o Brasil (São Paulo, SP e todo o país).",
       "address": "Av. Paulista, 1000 - Bela Vista, São Paulo - SP",
       "phone": "(11) 99999-9999",
       "email": "contato@grupobrm.com.br",
-      "whatsapp_url": "https://wa.me/5511999999999?text=Ol%C3%A1!%20Vim%20pelo%20chatbot%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20atendente."
+      "whatsapp_url": "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20Grupo%20BRM."
     },
     "companies": [
       {
@@ -21,80 +21,81 @@
         "order": 1,
         "name": "Sistemas",
         "tagline": "Sistemas comerciais para alta performance, frente de caixa e supermercados",
-        "description": "Especializada em sistemas comerciais integrados e gestão de varejo. Oferece controle total de frente de caixa (PDV), estoque em tempo real, emissão fiscal simplificada e relatórios de lucratividade para supermercados, atacados, lojas de conveniência e comércio em geral.",
+        "description": "A **Sistemas** é a empresa do Grupo BRM especializada em automação comercial e gestão de varejo. Desenvolvemos softwares de frente de caixa (PDV) ultra-rápidos e estáveis, com total controle de estoque, compras, vendas e gestão financeira para o comércio varejista e atacadista.",
         "features": [
-          "Frente de Caixa (PDV) de altíssima velocidade e contingência offline",
-          "Controle de Estoque avançado com gestão de lotes, validade e inventário",
-          "Emissão de Documentos Fiscais (NF-e, NFC-e, SAT, Sped e Bloco K)",
-          "Integração com Balanças, Etiquetadoras e PinPads (TEF)",
-          "Conciliação bancária automática e controle de vendas no cartão"
+          "Frente de Caixa (PDV) de altíssima velocidade e estabilidade com contingência offline (funciona mesmo sem internet)",
+          "Controle de Estoque Inteligente com gestão de lotes, datas de validade, inventário cego e auditoria de preços",
+          "Emissão Fiscal Completa e Automática: NF-e, NFC-e, SAT, Sped Fiscal, Sped Contribuições e Bloco K",
+          "Integração Nativa com Balanças de checkout/etiquetadoras, Leitores de Código de Barras e PinPads (TEF)",
+          "Conciliação bancária automática e controle detalhado de vendas no cartão de crédito/débito",
+          "Relatórios gerenciais de DRE, curva ABC de produtos e margem de lucratividade em tempo real"
         ],
-        "target_audience": "Supermercados, hortifrutis, atacadistas, minimercados, lojas de conveniência e comércio varejista.",
-        "keywords": ["sistemas", "sistema", "pdv", "supermercado", "supermercados", "estoque", "caixa", "frente de caixa", "vendas", "nfe", "nfce", "tef", "balanca", "inventario", "comercio"]
+        "target_audience": "Supermercados, minimercados, hortifrutis, atacadistas, lojas de conveniência, padarias e comércio varejista.",
+        "keywords": ["sistemas", "sistema", "pdv", "supermercado", "supermercados", "estoque", "caixa", "frente de caixa", "vendas", "nfe", "nfce", "tef", "balanca", "inventario", "comercio", "varejo", "atocado", "validade", "lote", "contingencia", "offline"]
       },
       {
         "id": "mo-publicidade",
         "order": 2,
         "name": "M.O Publicidade",
         "tagline": "Estratégia de marca, publicidade 360° e marketing de performance",
-        "description": "Agência de comunicação e publicidade estratégica focada no fortalecimento de marcas e aceleração de vendas. Desenvolve desde a criação de identidade visual até grandes campanhas de tráfego pago, redes sociais e materiais de ponto de venda.",
+        "description": "A **M.O Publicidade** é a agência de comunicação e publicidade estratégica do Grupo BRM. Desenvolvemos estratégias completas de posicionamento de marca, marketing de performance, gestão de redes sociais e campanhas que geram vendas reais e visibilidade no mercado.",
         "features": [
-          "Branding, criação de logotipos e manual de identidade visual completo",
-          "Gestão de Tráfego Pago (Google Ads, Meta Ads - Instagram/Facebook, TikTok Ads)",
-          "Gestão de Mídias Sociais, criação de artes, vídeos e planejamento editorial",
-          "Campanhas publicitárias integradas (On-line e Off-line)",
-          "Produção de materiais impressos, promocionais e catálogo corporativo"
+          "Branding & Identidade Visual: criação de logotipos, manual de marca e posicionamento de mercado",
+          "Gestão de Tráfego Pago & Performance: anúncios no Google Ads, Meta Ads (Instagram e Facebook) e TikTok Ads",
+          "Gestão de Mídias Sociais: planejamento editorial, criação de artes, copy estratégica e edição de vídeos (Reels/Shorts)",
+          "Campanhas Publicitárias 360°: estratégias de lançamento e crescimento On-line e Off-line",
+          "Produção Audiovisual & Gráfica: vídeos institucionais, fotos corporativas, materiais impressos e catálogos"
         ],
-        "target_audience": "Empresas que desejam aumentar suas vendas, profissionalizar sua imagem institucional e dominar o mercado local ou nacional.",
-        "keywords": ["mo", "publicidade", "marketing", "propaganda", "branding", "redes sociais", "anuncios", "campanhas", "google ads", "instagram", "facebook", "identidade visual", "logo", "agencia"]
+        "target_audience": "Empresas e marcas que desejam profissionalizar sua comunicação, aumentar o volume de clientes e dominar seu segmento.",
+        "keywords": ["mo", "publicidade", "marketing", "propaganda", "branding", "redes sociais", "anuncios", "campanhas", "google ads", "instagram", "facebook", "identidade visual", "logo", "agencia", "trafego pago", "performance", "conteudo", "design"]
       },
       {
         "id": "desenvolvimento",
         "order": 3,
         "name": "Desenvolvimento",
         "tagline": "Engenharia de software, plataformas web e aplicativos sob medida",
-        "description": "Fábrica de software de alta performance focada em transformar processos complexos em plataformas intuitivas. Desenvolve sistemas web sob medida, aplicativos móveis para iOS e Android, integrações de APIs e ecossistemas de ensino EAD.",
+        "description": "A **Desenvolvimento** é a fábrica de software e tecnologia do Grupo BRM. Construímos sistemas web sob medida, aplicativos móveis para iOS e Android, integrações de APIs corporativas, ecossistemas EAD e soluções de Inteligência Artificial para automatizar rotinas.",
         "features": [
-          "Desenvolvimento de Aplicativos Móveis Nativos e Híbridos (iOS e Android)",
-          "Plataformas e Softwares Web Sob Medida em arquitetura Cloud",
-          "Sistemas de EAD, treinamento corporativo e portais do cliente",
-          "Integração de APIs, ERPs, gateways de pagamento e automações",
-          "Dashboards de BI (Business Intelligence) e relatórios analíticos"
+          "Desenvolvimento de Aplicativos Móveis Nativos e Híbridos para iOS e Android",
+          "Plataformas e Softwares Web Sob Medida desenvolvidos em arquitetura Cloud resiliente e escalável",
+          "Sistemas de EAD (Ensino a Distância), treinamento corporativo e portais de atendimento ao cliente",
+          "Integração de APIs RESTful/GraphQL, ERPs, gateways de pagamento e automação de processos internos",
+          "Dashboards de BI (Business Intelligence), gráficos analíticos em tempo real e inteligência artificial"
         ],
-        "target_audience": "Corporações, startups, redes de ensino, franqueadoras e empresas que necessitam de soluções tecnológicas exclusivas.",
-        "keywords": ["desenvolvimento", "software", "app", "aplicativo", "web", "programacao", "api", "sistema sob medida", "ead", "plataforma", "bi", "dashboard", "fabrica de software"]
+        "target_audience": "Corporações, startups, franqueadoras, instituições de ensino e empresas com processos exclusivos.",
+        "keywords": ["desenvolvimento", "software", "app", "aplicativo", "web", "programacao", "api", "sistema sob medida", "ead", "plataforma", "bi", "dashboard", "fabrica de software", "cloud", "nuvem", "ia", "inteligencia artificial"]
       },
       {
         "id": "digmidia",
         "order": 4,
         "name": "DIGMIDIA",
         "tagline": "Mídia digital indoor, sinalização dinâmica e encartes digitais",
-        "description": "Pioneira em mídia digital no ponto de venda e comunicação corporativa visual. Transforma a experiência dos clientes no PDV através de redes de TV indoor, totens digitais interativos, encartes digitais dinâmicos e menu boards.",
+        "description": "A **DIGMIDIA** é a empresa pioneira em soluções de mídia digital indoor e sinalização inteligente no ponto de venda. Transformamos a comunicação visual de lojas e escritórios com redes de TV indoor, totens digitais interativos e encartes promocionais animados.",
         "features": [
-          "Rede de TV Indoor corporativa e promocional no ponto de venda",
-          "Totens Digitais Interativos para atendimento, senhas e catálogo de produtos",
-          "Encartes Digitais animados para WhatsApp, redes sociais e displays",
-          "Menu Boards Dinâmicos para restaurantes, lanchonetes e padarias",
-          "Gerenciamento de conteúdo 100% remoto via nuvem em tempo real"
+          "TV Indoor Corporativa & Promocional: transmissão de ofertas, conteúdos institucionais e notícias nas telas do PDV",
+          "Totens Digitais Interativos: atendimento, senhas de fila, vitrine virtual e catálogos interativos em tela sensível ao toque",
+          "Encartes Digitais Dinâmicos: folhetos de ofertas animados para disparo no WhatsApp, redes sociais e monitores",
+          "Menu Boards Dinâmicos: cardápios digitais interativos para restaurantes, padarias, lanchonetes e praças de alimentação",
+          "Gerenciamento 100% Remoto via Nuvem: atualização instantânea da programação das telas em tempo real de qualquer lugar"
         ],
-        "target_audience": "Supermercados, redes de varejo, restaurantes, clínicas, academias, shoppings e escritórios corporativos.",
-        "keywords": ["digmidia", "midia digital", "tv indoor", "toten", "totens", "encartes", "sinalizacao", "displays", "menu board", "encarte digital", "sinalizacao digital", "pdv digital"]
+        "target_audience": "Supermercados, redes de varejo, restaurantes, clínicas, academias, shopping centers e escritórios corporativos.",
+        "keywords": ["digmidia", "midia digital", "tv indoor", "toten", "totens", "encartes", "sinalizacao", "displays", "menu board", "encarte digital", "sinalizacao digital", "pdv digital", "telas", "cardapio digital"]
       },
       {
         "id": "contabilidade",
         "order": 5,
         "name": "Contabilidade",
         "tagline": "Gestão contábil estratégica, inteligência tributária e finanças",
-        "description": "Consultoria e assessoria contábil moderna que vai além do básico. Oferece inteligência tributária para redução legal da carga de impostos, escrituração contábil e fiscal precisa, BPO financeiro e gestão completa de folha de pagamento.",
+        "description": "A **Contabilidade** é a consultoria tributária e fiscal estratégica do Grupo BRM. Oferecemos inteligência financeira para redução legal da carga de impostos, planejamento fiscal preventivo, BPO financeiro e gestão trabalhista completa.",
         "features": [
-          "Planejamento Tributário Estratégico e Recuperação de Créditos fiscais",
-          "Escrituração Contábil, Fiscal e Emissão de Balanços Gerenciais",
-          "BPO Financeiro (Terceirização completa das rotinas de contas a pagar/receber)",
-          "Gestão Trabalhista, Folha de Pagamento e eSocial corporativo",
-          "Abertura, alteração de contrato social e blindagem patrimonial"
+          "Planejamento Tributário Estratégico e Recuperação de Créditos fiscais acumulados",
+          "Escrituração Contábil & Fiscal Completa com emissão de Balanços e Demonstrações Financeiras (DRE)",
+          "BPO Financeiro: terceirização completa das contas a pagar, contas a receber e fluxo de caixa da empresa",
+          "Gestão Trabalhista & Departamento Pessoal: folha de pagamento, férias, rescisões e conformidade eSocial",
+          "Abertura, alteração de contrato social, regularização jurídica e planejamento de blindagem patrimonial"
         ],
-        "target_audience": "Empresas do Simples Nacional, Lucro Presumido e Lucro Real que buscam segurança jurídica e economia em impostos.",
-        "keywords": ["contabilidade", "contabil", "imposto", "tributario", "fiscal", "folha", "bpo", "auditoria", "abrir empresa", "simples nacional", "lucro presumido", "lucro real", "balanco", "impostos"]
+        "target_audience": "Empresas enquadradas no Simples Nacional, Lucro Presumido e Lucro Real que buscam segurança jurídica e economia em impostos.",
+        "keywords": ["contabilidade", "contabil", "imposto", "tributario", "fiscal", "folha", "bpo", "auditoria", "abrir empresa", "simples nacional", "lucro presumido", "lucro real", "balanco", "impostos", "credito fiscal", "esocial"]
       }
     ],
     "intents": [
@@ -102,28 +103,70 @@
         "intent": "empresas_lista",
         "triggers": ["empresas", "🏢 empresas", "quais sao as empresas", "empresas do grupo", "quais empresas", "quais sao os negocios", "lista de empresas", "quais sao os serviços", "ver empresas", "todas as empresas"],
         "responses": [
-          "O Grupo BRM reúne 5 empresas especializadas e integradas:\n\n1. 💻 **Sistemas** (PDV, frente de caixa e automação para comércio)\n2. 📢 **M.O Publicidade** (Marketing 360°, tráfego e branding)\n3. ⚙️ **Desenvolvimento** (Apps móveis e softwares sob medida)\n4. 📺 **DIGMIDIA** (TV indoor, encartes digitais e sinalização)\n5. 📊 **Contabilidade** (Planejamento tributário e gestão fiscal)\n\nSobre qual das empresas gostaria de saber mais?"
+          "O **Grupo BRM** é composto por 5 empresas altamente integradas e especializadas:\n\n1. 💻 **Sistemas** (Automação comercial, PDV e gestão de estoque para varejo e supermercados)\n2. 📢 **M.O Publicidade** (Agência 360°, branding, tráfego pago e mídias sociais)\n3. ⚙️ **Desenvolvimento** (Softwares web sob medida, aplicativos móveis iOS/Android e APIs)\n4. 📺 **DIGMIDIA** (Mídia digital indoor, TV corporativa, encartes digitais e totens)\n5. 📊 **Contabilidade** (Planejamento tributário, BPO financeiro e gestão fiscal/trabalhista)\n\nQual destas empresas atende a sua necessidade atual?"
+        ]
+      },
+      {
+        "intent": "pdv_sistema_duvida",
+        "triggers": ["como funciona o pdv", "pdv offline", "funciona sem internet", "emite nota fiscal", "nfc-e", "sat", "balança"],
+        "responses": [
+          "Nosso sistema de **Frente de Caixa (PDV)** foi desenvolvido para garantir que o seu comércio nunca pare!\n\n• **Contingência Offline**: Se a internet cair, o caixa continua vendendo normalmente.\n• **Emissão Fiscal**: Emissão automática de NFC-e, NF-e, SAT e Sped.\n• **Equipamentos**: Compatível com balanças de checkout, leitores de código de barras e TEF (máquinas de cartão integradas ao caixa)."
+        ]
+      },
+      {
+        "intent": "supermercado_duvida",
+        "triggers": ["supermercado", "supermercados", "hortifruti", "minimercado", "validade", "estoque supermercado"],
+        "responses": [
+          "Para supermercados e varejo alimentar, oferecemos uma solução completa que une **Sistemas + DIGMIDIA + M.O Publicidade**:\n\n• **Gestão de Estoque**: Controle de lotes, datas de validade e inventário em tempo real.\n• **TV Indoor & Encartes Digitais**: Divulgação dinâmica das ofertas da semana nas telas da loja e via WhatsApp.\n• **PDV Ultra-Rápido**: Evita filas no caixa nos horários de pico."
+        ]
+      },
+      {
+        "intent": "marketing_duvida",
+        "triggers": ["trafego pago", "google ads", "instagram ads", "anunciar", "redes sociais", "branding", "criar logo"],
+        "responses": [
+          "A **M.O Publicidade** cuida de todo o posicionamento digital da sua marca:\n\n• **Gestão de Anúncios**: Campanhas otimizadas no Google Ads, Instagram e Facebook Ads para atração imediata de clientes.\n• **Redes Sociais**: Criação de artes profissionais, vídeos estratégicos e planejamento de postagens.\n• **Identidade Visual**: Criação e reformulação de logotipos e manuais de marca."
+        ]
+      },
+      {
+        "intent": "desenvolvimento_duvida",
+        "triggers": ["criar aplicativo", "criar app", "sistema web", "sistema sob medida", "desenvolver software", "quanto custa um app"],
+        "responses": [
+          "Na **Desenvolvimento**, construímos softwares e aplicativos sob medida de acordo com a regra de negócio da sua empresa:\n\n• **Apps Móveis**: Aplicativos nativos ou híbridos para iOS e Android.\n• **Plataformas Web**: Sistemas em nuvem, portais de clientes e dashboards interativos.\n• **Arquitetura Escalável**: Projetos desenvolvidos com máxima segurança, velocidade e capacidade de expansão."
+        ]
+      },
+      {
+        "intent": "digmidia_duvida",
+        "triggers": ["tv indoor", "totem", "totens", "encarte digital", "cardapio digital", "menu board"],
+        "responses": [
+          "A **DIGMIDIA** moderniza a comunicação visual da sua empresa:\n\n• **TV Indoor**: Redes de telas com programação promocional, notícias e ofertas no seu estabelecimento.\n• **Encartes Digitais**: Folhetos interativos animados perfeitos para envio no WhatsApp.\n• **Totens Interativos**: Terminais de autoatendimento, pesquisa de satisfação e senhas."
+        ]
+      },
+      {
+        "intent": "contabilidade_duvida",
+        "triggers": ["planejamento tributario", "reduzir imposto", "bpo financeiro", "folha de pagamento", "abrir empresa", "simples nacional", "lucro presumido"],
+        "responses": [
+          "Nossa divisão de **Contabilidade** atua com foco em gestão estratégica e economia fiscal:\n\n• **Planejamento Tributário**: Análise minuciosa para enquadrar sua empresa no regime tributário que paga menos impostos dentro da lei.\n• **BPO Financeiro**: Terceirização das rotinas de contas a pagar, receber e conciliação.\n• **Folha de Pagamento**: Gestão trabalhista completa em total conformidade com o eSocial."
+        ]
+      },
+      {
+        "intent": "cases_resultados",
+        "triggers": ["cases", "resultados", "clientes", "exemplos", "depoimentos", "historias de sucesso"],
+        "responses": [
+          "Conheça alguns dos resultados reais gerados pelo Grupo BRM:\n\n• **Rede Mais**: +18% em eficiência operacional através de marketing de performance.\n• **EcoVarejo**: Redução de 12% nos custos operacionais com reestruturação fiscal.\n• **SuperFácil**: +25% de agilidade com plataforma web e automação sob medida.\n• **UniPeças**: Comunicação unificada e vantagem competitiva com TV Indoor e DIGMIDIA."
         ]
       },
       {
         "intent": "contato_localizacao",
         "triggers": ["contato", "telefone", "whatsapp", "email", "endereco", "onde fica", "localizacao", "cidade", "estado", "atendem minha regiao"],
         "responses": [
-          "📍 **Endereço**: Av. Paulista, 1000 - São Paulo, SP\n📞 **Telefone / WhatsApp**: (11) 99999-9999\n✉️ **E-mail**: contato@grupobrm.com.br\n🌐 **Atendimento**: Atendemos empresas em **todo o território nacional (Brasil)**!\n\nDeseja conversar com nosso atendimento humano agora?"
+          "📍 **Endereço**: Av. Paulista, 1000 - Bela Vista, São Paulo - SP\n📞 **Telefone / WhatsApp**: (11) 99999-9999\n✉️ **E-mail**: contato@grupobrm.com.br\n🌐 **Atendimento**: Atendemos empresas e clientes em **todo o Brasil**!"
         ]
       },
       {
         "intent": "orcamento_proposta",
         "triggers": ["orcamento", "preço", "valor", "quanto custa", "contratar", "proposta", "comprar"],
         "responses": [
-          "Cada projeto no Grupo BRM é dimensionado sob medida para a sua necessidade! Analisamos o porte da sua empresa para oferecer o melhor custo-benefício.\n\nClique no botão abaixo para receber um orçamento rápido com nossos consultores no WhatsApp!"
-        ]
-      },
-      {
-        "intent": "suporte_horario",
-        "triggers": ["suporte", "horario", "funcionamento", "duvida tecnica", "atendimento"],
-        "responses": [
-          "⏰ **Horário de Atendimento**: Segunda a Sexta, das 08h às 18h.\n🤖 **Autoatendimento Chatbot**: Disponível 24 horas por dia, 7 dias por semana!\n\nSe você já é cliente e precisa de suporte técnico, pode falar diretamente com nossa equipe no WhatsApp."
+          "Cada solução do Grupo BRM é personalizada de acordo com o tamanho e objetivo da sua empresa!\n\nVocê pode nos enviar uma mensagem com os detalhes do seu projeto para elaborarmos um diagnóstico sem compromisso."
         ]
       },
       {
@@ -135,12 +178,12 @@
       }
     ],
     "greetings": [
-      "Olá! Seja muito bem-vindo(a) ao Autoatendimento 24h do **Grupo BRM**! 👋 Como posso ajudar seu negócio hoje?",
-      "Olá! Que excelente ter você por aqui. Sou o assistente virtual do **Grupo BRM**. Sobre qual das nossas 5 empresas você gostaria de informações?"
+      "Olá! Seja muito bem-vindo(a) ao Autoatendimento do **Grupo BRM**! 👋 Como posso ajudar sua empresa hoje?",
+      "Olá! Sou o assistente virtual do **Grupo BRM**. Sobre qual das nossas soluções ou empresas você gostaria de saber mais?"
     ],
     "fallbacks": [
-      "Entendi sua dúvida! Para responder com exatidão sobre esse assunto específico, recomendo conversar diretamente com nossa equipe no WhatsApp.",
-      "Para obter uma resposta detalhada e personalizada para o seu modelo de negócio, posso te conectar agora com um consultor especialista no WhatsApp!"
+      "Posso te ajudar com detalhes sobre **Sistemas**, **M.O Publicidade**, **Desenvolvimento**, **DIGMIDIA** ou **Contabilidade**! Qual desses assuntos você gostaria de explorar?",
+      "Sobre esse assunto específico, posso detalhar como nossas soluções em tecnologia, gestão ou publicidade podem atender sua empresa!"
     ]
   };
 
@@ -167,11 +210,11 @@
             <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
           </span>
         </div>
-        <span class="hidden sm:inline font-bold font-heading text-xs tracking-wide">Fale Conosco 24h</span>
+        <span class="hidden sm:inline font-bold font-heading text-xs tracking-wide">Autoatendimento 24h</span>
       </button>
 
       <!-- Chat Modal Window -->
-      <div id="brm-chat-modal" class="fixed bottom-20 right-5 z-50 w-[92vw] sm:w-[380px] h-[520px] bg-white rounded-3xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden hidden transition-all duration-300 transform scale-95 opacity-0">
+      <div id="brm-chat-modal" class="fixed bottom-20 right-5 z-50 w-[92vw] sm:w-[390px] h-[530px] bg-white rounded-3xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden hidden transition-all duration-300 transform scale-95 opacity-0">
         <!-- Header -->
         <div class="bg-[#0B1D3A] text-white p-4 flex items-center justify-between border-b border-blue-900/40">
           <div class="flex items-center space-x-3">
@@ -185,7 +228,7 @@
               <h3 class="font-bold font-heading text-sm leading-tight text-white">Grupo BRM</h3>
               <p class="text-[11px] text-emerald-300 flex items-center space-x-1">
                 <span>●</span>
-                <span>Assistente Virtual 24h</span>
+                <span>Atendente Virtual</span>
               </p>
             </div>
           </div>
@@ -213,7 +256,7 @@
 
         <!-- Input Footer -->
         <form id="brm-chat-form" class="p-3 bg-white border-t border-gray-200 flex items-center space-x-2">
-          <input type="text" id="brm-chat-input" placeholder="Digite sua dúvida ou empresa..." autocomplete="off" class="flex-1 px-4 py-2.5 rounded-full bg-gray-100 text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#1E4FA3]">
+          <input type="text" id="brm-chat-input" placeholder="Pergunte sobre nossas empresas ou serviços..." autocomplete="off" class="flex-1 px-4 py-2.5 rounded-full bg-gray-100 text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#1E4FA3]">
           <button type="submit" class="p-2.5 bg-[#19A37F] hover:bg-[#138366] text-white rounded-full transition-colors shadow-md flex items-center justify-center">
             <svg class="w-4 h-4 transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
@@ -237,8 +280,8 @@
     }
   }
 
-  // 3. Format & Add Message to UI
-  function addMessage(text, sender = "bot", hasWhatsAppBtn = false) {
+  // 3. Format & Add Message to UI (NO repetitive human transfer buttons)
+  function addMessage(text, sender = "bot") {
     const msgContainer = document.getElementById("brm-chat-messages");
     if (!msgContainer) return;
 
@@ -249,25 +292,14 @@
     if (sender === "user") {
       bubble.className = "max-w-[80%] bg-[#1E4FA3] text-white p-3 rounded-2xl rounded-tr-none shadow-sm leading-relaxed";
     } else {
-      bubble.className = "max-w-[85%] bg-white text-gray-800 p-3 rounded-2xl rounded-tl-none border border-gray-200 shadow-sm leading-relaxed space-y-2";
+      bubble.className = "max-w-[85%] bg-white text-gray-800 p-3.5 rounded-2xl rounded-tl-none border border-gray-200 shadow-sm leading-relaxed space-y-2";
     }
 
-    // Convert markdown bold to HTML
+    // Convert markdown bold to HTML & newlines
     let formattedText = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+    formattedText = formattedText.replace(/_(.*?)_/g, "<em>$1</em>");
     formattedText = formattedText.replace(/\n/g, "<br>");
     bubble.innerHTML = formattedText;
-
-    if (hasWhatsAppBtn && knowledgeData) {
-      const btn = document.createElement("a");
-      btn.href = knowledgeData.group_info.whatsapp_url;
-      btn.target = "_blank";
-      btn.className = "mt-2 w-full py-2 px-3 bg-[#19A37F] hover:bg-[#138366] text-white text-[11px] font-bold rounded-xl flex items-center justify-center space-x-1.5 transition-colors shadow-sm";
-      btn.innerHTML = `
-        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        <span>Falar com Atendente Humano</span>
-      `;
-      bubble.appendChild(btn);
-    }
 
     wrapper.appendChild(bubble);
     msgContainer.appendChild(wrapper);
@@ -284,16 +316,16 @@
     const cleanQuery = normalizeStr(query);
 
     if (!knowledgeData) {
-      addMessage("Desculpe, estou carregando minha base de conhecimento. Tente novamente em um instante!", "bot");
+      addMessage("Desculpe, estou finalizando a inicialização. Pode repetir em um segundo?", "bot");
       return;
     }
 
-    // A. Check General Intent Triggers FIRST (e.g., "empresas", "contato", "orçamento")
+    // A. Check General Intent Triggers FIRST (e.g., "empresas", "contato", "pdv", "desenvolvimento", etc.)
     for (const intentObj of knowledgeData.intents) {
       for (const trigger of intentObj.triggers) {
         if (cleanQuery.includes(normalizeStr(trigger))) {
           const randomResp = intentObj.responses[Math.floor(Math.random() * intentObj.responses.length)];
-          addMessage(randomResp, "bot", true);
+          addMessage(randomResp, "bot");
           return;
         }
       }
@@ -315,17 +347,16 @@
       }
 
       if (isMatch) {
-        let responseText = `🏢 **Empresa ${company.order}ª do Grupo: ${company.name.toUpperCase()}**\n\n_${company.tagline}_\n\n${company.description}\n\n**✨ Principais Recursos e Diferenciais:**\n`;
+        let responseText = `🏢 **Empresa ${company.order}ª do Grupo: ${company.name.toUpperCase()}**\n\n_${company.tagline}_\n\n${company.description}\n\n**✨ Principais Serviços e Soluções:**\n`;
         if (company.features && company.features.length) {
           company.features.forEach(f => {
             responseText += `• ${f}\n`;
           });
         }
         if (company.target_audience) {
-          responseText += `\n🎯 **Público Indicado:** ${company.target_audience}\n`;
+          responseText += `\n🎯 **Público Indicado:** ${company.target_audience}`;
         }
-        responseText += `\nGostaria de solicitar uma proposta ou tirar dúvidas sobre **${company.name}**?`;
-        addMessage(responseText, "bot", true);
+        addMessage(responseText, "bot");
         return;
       }
     }
@@ -337,9 +368,9 @@
       return;
     }
 
-    // D. Fallback Response
+    // D. Fallback Response (Clean & Helpful)
     const fallback = knowledgeData.fallbacks[Math.floor(Math.random() * knowledgeData.fallbacks.length)];
-    addMessage(fallback, "bot", true);
+    addMessage(fallback, "bot");
   }
 
   // 5. Initialize Events
