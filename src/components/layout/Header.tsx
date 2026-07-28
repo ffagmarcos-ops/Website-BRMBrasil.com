@@ -108,12 +108,8 @@ export const Header: React.FC = () => {
           })}
         </nav>
 
-        {/* Right CTA Button & Mobile Trigger */}
+        {/* Mobile Trigger */}
         <div className="flex items-center space-x-3">
-          <div className="hidden sm:block">
-            <WhatsAppButton text="Fale Conosco" variant="blue" size="md" />
-          </div>
-
           {/* Mobile Hamburger Button */}
           <button
             type="button"
