@@ -142,11 +142,16 @@
     for (const company of knowledgeData.companies) {
       for (const kw of company.keywords) {
         if (cleanQuery.includes(kw)) {
-          let responseText = `🏢 **Empresa ${company.order}ª do Grupo: ${company.name.toUpperCase()}**\n\n_${company.tagline}_\n\n${company.description}\n\n**Principais Serviços:**\n`;
-          company.services.forEach(s => {
-            responseText += `• ${s}\n`;
-          });
-          responseText += `\nGostaria de solicitar um orçamento para **${company.name}**?`;
+          let responseText = `🏢 **Empresa ${company.order}ª do Grupo: ${company.name.toUpperCase()}**\n\n_${company.tagline}_\n\n${company.description}\n\n**✨ Principais Recursos e Diferenciais:**\n`;
+          if (company.features && company.features.length) {
+            company.features.forEach(f => {
+              responseText += `• ${f}\n`;
+            });
+          }
+          if (company.target_audience) {
+            responseText += `\n🎯 **Público Indicado:** ${company.target_audience}\n`;
+          }
+          responseText += `\nGostaria de solicitar uma proposta ou tirar dúvidas sobre **${company.name}**?`;
           addMessage(responseText, "bot", true);
           return;
         }
