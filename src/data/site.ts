@@ -43,5 +43,4 @@ export const mainNav: NavItem[] = [
   },
   { label: "Empresas", href: "/empresas" },
   { label: "Cases", href: "/cases" },
-  { label: "Contato", href: "/contato" },
 ];
