@@ -10,7 +10,7 @@ export interface NavItem {
 
 export const siteConfig = {
   name: "Grupo BRM",
-  slogan: "Conectamos soluções. Potencializamos resultados.",
+  slogan: "Conexão que gera valor. Soluções que transformam.",
   tagline: "Soluções integradas para impulsionar empresas e negócios.",
   description: "Tecnologia, estratégia, comunicação e gestão trabalhando juntas para gerar resultados reais e crescimento sustentável.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://grupobrm.com.br",

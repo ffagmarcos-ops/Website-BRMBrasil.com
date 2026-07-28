@@ -5,17 +5,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap');
 
 :root {
-  --color-navy: #061F40;
-  --color-blue: #0754A6;
-  --color-blue-bright: #0878D1;
-  --color-green: #39A844;
-  --color-lime: #9BC51C;
-  --color-cyan: #08AFC4;
-  --color-purple: #50319A;
-  --color-orange: #F36C0A;
-  --color-light: #F5F7FA;
-  --color-border: #DDE4EC;
-  --color-dark: #172033;
+  --color-navy: #0B1D3A;        /* Azul Marinho Profundo */
+  --color-blue: #1E4FA3;        /* Azul Corporativo */
+  --color-blue-bright: #1E4FA3; /* Azul Corporativo */
+  --color-green: #19A37F;       /* Verde Inovação */
+  --color-lime: #19A37F;        /* Verde Inovação Accent */
+  --color-cyan: #19A37F;        /* Verde Inovação Cyan */
+  --color-purple: #50319A;      /* Roxo Accent */
+  --color-orange: #F36C0A;      /* Laranja Accent */
+  --color-light: #E6E8EB;       /* Cinza Claro */
+  --color-border: #E6E8EB;      /* Cinza Claro Border */
+  --color-gray-medium: #A7ACB3; /* Cinza Médio */
+  --color-dark: #4A4F57;        /* Cinza Escuro */
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
 }
@@ -108,8 +109,8 @@ header.sticky-header.scrolled {
 }
 
 .btn-whatsapp-blue:hover {
-  background-color: #064385;
-  box-shadow: 0 4px 12px rgba(7, 84, 166, 0.3);
+  background-color: #0B1D3A;
+  box-shadow: 0 4px 12px rgba(30, 79, 163, 0.35);
 }
 
 .btn-whatsapp-green {
@@ -128,8 +129,8 @@ header.sticky-header.scrolled {
 }
 
 .btn-whatsapp-green:hover {
-  background-color: #2e8837;
-  box-shadow: 0 4px 16px rgba(57, 168, 68, 0.35);
+  background-color: #138366;
+  box-shadow: 0 4px 16px rgba(25, 163, 127, 0.35);
 }
 
 .btn-outline-white {
