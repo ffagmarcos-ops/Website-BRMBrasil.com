@@ -3,8 +3,8 @@
     "name": "Grupo BRM",
     "slogan": "Conexão que gera valor. Soluções que transformam.",
     "description": "O Grupo BRM é um ecossistema empresarial focado em conectar negócios, tecnologia, gestão, comunicação e inteligência para impulsionar resultados sustentáveis em empresas de todos os portes.",
-    "coverage": "Atendemos empresas em todo o território nacional (São Paulo e todo o Brasil).",
-    "address": "Av. Paulista, 1000 - São Paulo, SP",
+    "coverage": "Atendemos empresas em todo o território nacional (Niterói - RJ e todo o Brasil).",
+    "address": "Alameda São Boaventura, 540 - Fonseca, Niterói - RJ, 24120-191",
     "phone": "(11) 99999-9999",
     "email": "contato@grupobrm.com.br"
   },
@@ -157,10 +157,10 @@
     },
     {
       "intent": "contato_localizacao_duvida",
-      "triggers": ["contato", "telefone", "whatsapp", "email", "endereco", "onde fica", "sao paulo", "atendem meu estado"],
+      "triggers": ["contato", "telefone", "whatsapp", "email", "endereco", "onde fica", "niteroi", "rio de janeiro", "atendem meu estado"],
       "answers": [
-        "Ficamos localizados na **Av. Paulista, 1000 - São Paulo, SP**! 📍 Mas fique tranquilo(a): atendemos clientes e empresas em **todo o território nacional (Brasil inteiro)** via atendimento digital e remoto com total proximidade.",
-        "Nossa sede fica na **Av. Paulista, 1000 (São Paulo, SP)**, e prestamos atendimento especializado para empresas de todos os estados do Brasil! E-mail: contato@grupobrm.com.br / Tel: (11) 99999-9999."
+        "Ficamos localizados na **Alameda São Boaventura, 540 - Fonseca, Niterói - RJ, 24120-191**! 📍 Mas fique tranquilo(a): atendemos clientes e empresas em **todo o território nacional (Brasil inteiro)** via atendimento digital e remoto com total proximidade.",
+        "Nossa sede fica na **Alameda São Boaventura, 540 (Niterói - RJ)**, e prestamos atendimento especializado para empresas de todos os estados do Brasil! E-mail: contato@grupobrm.com.br / Tel: (11) 99999-9999."
       ]
     },
     {

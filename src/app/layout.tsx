@@ -76,10 +76,10 @@ export default function RootLayout({
     email: siteConfig.contactEmail,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Av. Paulista, 1000",
-      addressLocality: "São Paulo",
-      addressRegion: "SP",
-      postalCode: "01310-100",
+      streetAddress: "Alameda São Boaventura, 540 - Fonseca",
+      addressLocality: "Niterói",
+      addressRegion: "RJ",
+      postalCode: "24120-191",
       addressCountry: "BR",
     },
     sameAs: [

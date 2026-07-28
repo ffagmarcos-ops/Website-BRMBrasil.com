@@ -18,7 +18,7 @@ export const siteConfig = {
   defaultWhatsAppMessage: "Olá! Conheci o Grupo BRM pelo site e gostaria de saber mais sobre as soluções.",
   contactEmail: "contato@grupobrm.com.br",
   contactPhone: "(11) 99999-9999",
-  address: "Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100",
+  address: "Alameda São Boaventura, 540 - Fonseca, Niterói - RJ, 24120-191",
   workingHours: "Segunda a Sexta, das 08h às 18h",
   socialLinks: {
     linkedin: "https://linkedin.com/company/grupobrm",
