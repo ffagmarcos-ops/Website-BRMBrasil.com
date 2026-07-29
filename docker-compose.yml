@@ -1,0 +1,64 @@
+services:
+  brmbrasil-site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_SITE_URL: https://brmbrasil.com
+        NEXT_PUBLIC_WHATSAPP_NUMBER: ${NEXT_PUBLIC_WHATSAPP_NUMBER:-5511999999999}
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      NEXT_PUBLIC_SITE_URL: https://brmbrasil.com
+      NEXT_PUBLIC_WHATSAPP_NUMBER: ${NEXT_PUBLIC_WHATSAPP_NUMBER:-5511999999999}
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "node -e \"fetch('http://127.0.0.1:3000').then((r) => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))\"",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.services.brmbrasil-site.loadbalancer.server.port=3000"
+
+      # HTTPS router (brmbrasil.com + www)
+      - "traefik.http.routers.brmbrasil-site.rule=Host(`brmbrasil.com`) || Host(`www.brmbrasil.com`)"
+      - "traefik.http.routers.brmbrasil-site.entrypoints=websecure"
+      - "traefik.http.routers.brmbrasil-site.priority=100"
+      - "traefik.http.routers.brmbrasil-site.tls.certresolver=myresolver"
+      - "traefik.http.routers.brmbrasil-site.service=brmbrasil-site"
+      - "traefik.http.routers.brmbrasil-site.middlewares=brmbrasil-www-redirect@docker,brmbrasil-compress@docker,brmbrasil-sec-headers@docker"
+
+      # HTTP -> HTTPS redirect
+      - "traefik.http.routers.brmbrasil-site-http.rule=Host(`brmbrasil.com`) || Host(`www.brmbrasil.com`)"
+      - "traefik.http.routers.brmbrasil-site-http.entrypoints=web"
+      - "traefik.http.routers.brmbrasil-site-http.priority=100"
+      - "traefik.http.routers.brmbrasil-site-http.middlewares=brmbrasil-https-redirect@docker"
+
+      # Middlewares
+      - "traefik.http.middlewares.brmbrasil-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.brmbrasil-https-redirect.redirectscheme.permanent=true"
+      - "traefik.http.middlewares.brmbrasil-www-redirect.redirectregex.regex=^https?://www\\.brmbrasil\\.com/(.*)"
+      - "traefik.http.middlewares.brmbrasil-www-redirect.redirectregex.replacement=https://brmbrasil.com/$${1}"
+      - "traefik.http.middlewares.brmbrasil-www-redirect.redirectregex.permanent=true"
+      - "traefik.http.middlewares.brmbrasil-compress.compress=true"
+      - "traefik.http.middlewares.brmbrasil-sec-headers.headers.stsSeconds=31536000"
+      - "traefik.http.middlewares.brmbrasil-sec-headers.headers.stsIncludeSubdomains=true"
+      - "traefik.http.middlewares.brmbrasil-sec-headers.headers.stsPreload=true"
+      - "traefik.http.middlewares.brmbrasil-sec-headers.headers.forceSTSHeader=true"
+      - "traefik.http.middlewares.brmbrasil-sec-headers.headers.contentTypeNosniff=true"
+      - "traefik.http.middlewares.brmbrasil-sec-headers.headers.browserXssFilter=true"
+      - "traefik.http.middlewares.brmbrasil-sec-headers.headers.referrerPolicy=strict-origin-when-cross-origin"
+      - "traefik.http.middlewares.brmbrasil-sec-headers.headers.frameDeny=true"
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true

@@ -131,6 +131,35 @@ Toda a camada de dados foi centralizada na pasta `src/data/`, permitindo alterar
 
 ---
 
+## 🐳 Deploy no Portainer (via Repositório)
+
+Este projeto já está preparado para deploy em servidor com Traefik e Portainer usando o arquivo [docker-compose.yml](docker-compose.yml).
+
+### Pré-requisitos no servidor
+
+- Rede externa `traefik` já criada e utilizada pelo proxy.
+- Resolver TLS `myresolver` já configurado no Traefik.
+- DNS dos domínios apontando para o servidor:
+  - `brmbrasil.com`
+  - `www.brmbrasil.com`
+
+### Subir stack pelo Portainer
+
+1. No Portainer, acesse **Stacks** > **Add stack** > **Repository**.
+2. Informe a URL deste repositório e branch desejada.
+3. Defina o caminho do compose como `docker-compose.yml`.
+4. Em **Environment variables** da stack, configure:
+   - `NEXT_PUBLIC_WHATSAPP_NUMBER` (ex.: `5511999999999`)
+5. Clique em **Deploy the stack**.
+
+### Observações de compatibilidade com servidor compartilhado
+
+- Não foi definido `container_name`, evitando conflito com outras stacks.
+- Não há volumes nomeados neste projeto, portanto não existe risco de colisão de nomes de volume.
+- Os identificadores Traefik foram prefixados com `brmbrasil-` para reduzir risco de duplicidade de routers/middlewares/services.
+
+---
+
 ## 🚀 Como Realizar Deploy na Vercel
 
 1. Envie o projeto para o seu repositório GitHub, GitLab ou Bitbucket.
